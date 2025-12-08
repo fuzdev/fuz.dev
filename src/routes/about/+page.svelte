@@ -4,7 +4,7 @@
 	import DocsFooter from '@fuzdev/fuz_ui/DocsFooter.svelte';
 	import Breadcrumb from '@fuzdev/fuz_ui/Breadcrumb.svelte';
 	import Svg from '@fuzdev/fuz_ui/Svg.svelte';
-	import {fuz_logo} from '@fuzdev/fuz_ui/logos.js';
+	import {logo_fuz} from '@fuzdev/fuz_ui/logos.js';
 
 	import {library_json} from '$routes/library.js';
 
@@ -16,7 +16,7 @@
 <main class="width_upto_md">
 	<section class="box">
 		<header class="box pt_xl">
-			<Svg data={fuz_logo} size="var(--icon_size_xl)" />
+			<Svg data={logo_fuz} size="var(--icon_size_xl)" />
 			<h1 class="mt_xl2">fuz.dev</h1>
 		</header>
 	</section>
