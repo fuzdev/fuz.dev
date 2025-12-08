@@ -14,29 +14,59 @@
 	align-items: center;
 }
 
+.width_upto_sm {
+	width: 100%;
+	max-width: var(--distance_sm);
+}
+
 .width_upto_md {
 	width: 100%;
 	max-width: var(--distance_md);
+}
+
+.selectable {
+	--button_fill: color-mix(in hsl, var(--fill) 8%, transparent);
+	--button_fill_hover: color-mix(in hsl, var(--fill) 16%, transparent);
+	--button_fill_active: color-mix(in hsl, var(--fill) 24%, transparent);
+	cursor: pointer;
+	background-color: var(--button_fill);
+	border-color: var(--border_color_3);
+	border-style: var(--border_style);
+	border-width: var(--border_width);
+}
+.selectable:hover {
+	background-color: var(--button_fill_hover);
+	border-color: var(--border_color_2);
+}
+.selectable.selected,
+.selectable:active {
+	background-color: var(--button_fill_active);
+	border-color: var(--color_a_5);
+}
+.selectable.selected {
+	cursor: default;
+}
+.selectable.selected.deselectable:not(:disabled) {
+	cursor: pointer;
+}
+
+/* A pane is a box floating over the page, like for dialogs.
+			By default it's opaque, resetting the background to the initial depth. */
+.pane {
+	background-color: var(--pane_bg, var(--bg));
+	box-shadow: var(
+		--pane_shadow,
+		/* TODO this is terrible, maybe add all the variables? should be culled anyway? */
+		var(--shadow_bottom_md)
+			color-mix(in hsl, var(--shadow_color) var(--shadow_alpha_3), transparent)
+	);
+	border-radius: var(--border_radius_xs);
 }
 
 /* A panel is a box embedded into the page, useful for visually isolating content. */
 .panel {
 	border-radius: var(--border_radius_xs);
 	background-color: var(--panel_bg, var(--fg_1));
-}
-
-/* TODO other button variants? */
-/* TODO this is slightly strange that it doesn't use --icon_size */
-/* These are used as modifiers to buttons, and so they use `:where` so they cascade. */
-.icon_button {
-	width: var(--input_height);
-	height: var(--input_height);
-	min-width: var(--input_height);
-	min-height: var(--input_height);
-	flex-shrink: 0;
-	line-height: 1;
-	font-weight: 900;
-	padding: 0;
 }
 
 /* TODO maybe this belongs with the reset, like `selected`? or does `selected` belong here? */
@@ -48,6 +78,64 @@
 .plain:hover,
 .plain:active {
 	--border_color: transparent;
+}
+
+.menu_item {
+	--border_radius: 0;
+	--border_color: var(--border_color_3);
+	position: relative;
+	z-index: 2;
+	cursor: pointer;
+	width: 100%;
+	min-height: var(--min_height, var(--icon_size_sm));
+	display: flex;
+	justify-content: space-between;
+	align-items: center;
+	padding: var(--menu_item_padding, var(--space_xs3) var(--space_xs));
+}
+.menu_item.selected {
+	/* TODO different patterns for border and bg? */
+	--border_color: var(--color_a_5);
+	background-color: var(--fg_1);
+	z-index: 1;
+	cursor: default;
+}
+.menu_item.selected.deselectable:not(:disabled) {
+	cursor: pointer;
+}
+.menu_item:hover {
+	--border_color: var(--border_color_3);
+	background-color: var(--fg_0);
+}
+.menu_item:active,
+.menu_item.selected:hover {
+	--border_color: var(--border_color_3);
+	background-color: var(--fg_2);
+}
+.menu_item.plain {
+	border: none;
+}
+.menu_item .content {
+	display: flex;
+	align-items: center;
+	flex: 1;
+	/* allows the flex children to shrink */
+	min-width: 0;
+}
+.menu_item .icon {
+	width: var(--icon_size, var(--icon_size_md));
+	margin-right: var(--space_sm);
+	flex-shrink: 0;
+	text-align: center;
+	font-weight: 900;
+}
+.menu_item .title {
+	margin-right: var(--space_lg);
+	flex-shrink: 1;
+	overflow: hidden;
+	white-space: nowrap;
+	text-overflow: ellipsis;
+	line-height: var(--line_height_lg); /* prevents the bottom of g's and others from being cut off */
 }
 
 .chip {
@@ -70,8 +158,22 @@ a.chip {
 .display_flex {
 	display: flex;
 }
+.display_inline_flex {
+	display: inline-flex;
+}
 .flex_1 {
 	flex: 1;
+}
+.align_items_center {
+	align-items: center;
+}
+.font_size_md {
+	font-size: var(--font_size_md);
+	--font_size: var(--font_size_md);
+}
+.font_size_lg {
+	font-size: var(--font_size_lg);
+	--font_size: var(--font_size_lg);
 }
 .font_size_xl {
 	font-size: var(--font_size_xl);
@@ -80,6 +182,47 @@ a.chip {
 .font_size_xl5 {
 	font-size: var(--font_size_xl5);
 	--font_size: var(--font_size_xl5);
+}
+.text_color_3 {
+	color: var(--text_color_3);
+}
+.bg {
+	background-color: var(--bg);
+}
+.color_a_5 {
+	color: var(--color_a_5);
+}
+.color_b_5 {
+	color: var(--color_b_5);
+}
+.color_c_5 {
+	color: var(--color_c_5);
+}
+.color_d_5 {
+	color: var(--color_d_5);
+}
+.color_e_5 {
+	color: var(--color_e_5);
+}
+.color_f_5 {
+	color: var(--color_f_5);
+}
+.color_g_5 {
+	color: var(--color_g_5);
+}
+.color_h_5 {
+	color: var(--color_h_5);
+}
+.border_radius_sm {
+	border-radius: var(--border_radius_sm);
+}
+.shadow_md {
+	box-shadow: var(--shadow_md)
+		color-mix(in hsl, var(--shadow_color) var(--shadow_alpha, var(--shadow_alpha_3)), transparent);
+}
+.shadow_bottom_sm {
+	box-shadow: var(--shadow_bottom_sm)
+		color-mix(in hsl, var(--shadow_color) var(--shadow_alpha, var(--shadow_alpha_2)), transparent);
 }
 .shadow_inset_xs {
 	box-shadow: var(--shadow_inset_xs)
@@ -91,18 +234,29 @@ a.chip {
 .height_100 {
 	height: 100%;
 }
+.p_xs2 {
+	padding: var(--space_xs2);
+}
 .p_lg {
 	padding: var(--space_lg);
-}
-.p_xl {
-	padding: var(--space_xl);
 }
 .pt_xl {
 	padding-top: var(--space_xl);
 }
+.pl_lg {
+	padding-left: var(--space_lg);
+}
+.px_md {
+	padding-left: var(--space_md);
+	padding-right: var(--space_md);
+}
 .px_xl {
 	padding-left: var(--space_xl);
 	padding-right: var(--space_xl);
+}
+.py_xs {
+	padding-top: var(--space_xs);
+	padding-bottom: var(--space_xs);
 }
 .py_md {
 	padding-top: var(--space_md);
@@ -117,11 +271,27 @@ a.chip {
 .mr_xs {
 	margin-right: var(--space_xs);
 }
+.mb_xs {
+	margin-bottom: var(--space_xs);
+}
+.mb_sm {
+	margin-bottom: var(--space_sm);
+}
 .mb_lg {
 	margin-bottom: var(--space_lg);
 }
-.ml_sm {
-	margin-left: var(--space_sm);
+.mb_xl2 {
+	margin-bottom: var(--space_xl2);
+}
+.mb_xl3 {
+	margin-bottom: var(--space_xl3);
+}
+.mb_xl9 {
+	margin-bottom: var(--space_xl9);
+}
+.font_weight_500 {
+	font-weight: 500;
+	--font_weight: 500;
 }
 
 /* generated by src/routes/fuz.gen.css.ts */

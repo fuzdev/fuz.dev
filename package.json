@@ -1,13 +1,14 @@
 {
-  "name": "@fuzdev/fuz_template",
+  "name": "www.fuz.dev",
   "version": "0.0.1",
-  "description": "a static web app and Node library template with TypeScript, Svelte, SvelteKit, Vite, esbuild, Gro, and Fuz",
-  "glyph": "❄",
+  "description": "website for the Fuz stack",
+  "motto": "friendly user zystem",
+  "glyph": "🦋",
   "logo": "logo.svg",
   "logo_alt": "a friendly pixelated spider facing you",
   "public": true,
-  "homepage": "https://template.fuz.dev/",
-  "repository": "https://github.com/fuzdev/fuz_template",
+  "homepage": "https://www.fuz.dev/",
+  "repository": "https://github.com/fuzdev/www.fuz.dev",
   "scripts": {
     "start": "gro dev",
     "dev": "gro dev",
@@ -22,8 +23,8 @@
     "node": ">=22.15"
   },
   "devDependencies": {
-    "@fuzdev/fuz_css": "^0.42.0",
-    "@fuzdev/fuz_ui": "^0.171.0",
+    "@fuzdev/fuz_css": "^0.42.1",
+    "@fuzdev/fuz_ui": "^0.172.0",
     "@fuzdev/fuz_util": "^0.42.0",
     "@ryanatkn/eslint-config": "^0.9.0",
     "@ryanatkn/gro": "^0.181.0",

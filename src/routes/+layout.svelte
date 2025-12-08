@@ -2,22 +2,31 @@
 	import '@fuzdev/fuz_css/style.css';
 	import '@fuzdev/fuz_css/theme.css';
 	import '$routes/fuz.css';
-	import '$routes/style.css';
 
-	import Themed from '@fuzdev/fuz_ui/Themed.svelte';
 	import type {Snippet} from 'svelte';
+	import Themed from '@fuzdev/fuz_ui/Themed.svelte';
+	import ContextmenuRoot from '@fuzdev/fuz_ui/ContextmenuRoot.svelte';
+	import {library_context, Library} from '@fuzdev/fuz_ui/library.svelte.js';
+	import Spiders from '@fuzdev/fuz_ui/Spiders.svelte';
+
+	import {library_json} from './library.js';
 
 	const {
 		children,
 	}: {
 		children: Snippet;
 	} = $props();
+
+	library_context.set(new Library(library_json));
 </script>
 
 <svelte:head>
-	<title>@fuzdev/fuz_template</title>
+	<title>Fuz - friendly user zystem</title>
 </svelte:head>
 
 <Themed>
-	{@render children()}
+	<ContextmenuRoot>
+		{@render children()}
+		<Spiders />
+	</ContextmenuRoot>
 </Themed>
