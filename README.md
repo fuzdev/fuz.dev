@@ -5,7 +5,7 @@
 > friendly user zystem 🦋 [fuz.dev](https://www.fuz.dev/)
 
 Fuz is a zippy stack and forge for the commons.
-Fuz has a collection of libraries for making modern websites
+Today Fuz has a collection of libraries for making modern websites
 with TypeScript, CSS, Svelte, and SvelteKit/Vite,
 and soon they'll be joined by native tools for sovereign software development, written in Rust.
 
