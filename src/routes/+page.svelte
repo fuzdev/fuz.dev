@@ -19,10 +19,9 @@
 			<div class="mb_lg p_xs2 shadow_md border_radius_sm">
 				<div class="width_upto_sm panel p_lg shadow_inset_xs bg">
 					<p>
-						Fuz is a zippy stack and forge for the commons. Right now Fuz includes a collection of
-						libraries for making modern websites with TypeScript, CSS, Svelte, and SvelteKit/Vite.
-						Soon they'll be joined by native tools for sovereign software development, written in
-						Rust.
+						Fuz is a zippy stack and forge for the commons. Fuz has a collection of libraries for
+						making modern websites with TypeScript, CSS, Svelte, and SvelteKit/Vite, and soon
+						they'll be joined by native tools for sovereign software development, written in Rust.
 					</p>
 				</div>
 			</div>
