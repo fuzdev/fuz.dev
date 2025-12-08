@@ -259,6 +259,9 @@ a.chip {
 .mb_xl2 {
 	margin-bottom: var(--space_xl2);
 }
+.mb_xl3 {
+	margin-bottom: var(--space_xl3);
+}
 .mb_xl9 {
 	margin-bottom: var(--space_xl9);
 }
