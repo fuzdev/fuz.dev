@@ -6,8 +6,7 @@ export const library_json: LibraryJson = {
 	package_json: {
 		name: 'www.fuz.dev',
 		version: '0.0.1',
-		description:
-			'a static web app and Node library template with TypeScript, Svelte, SvelteKit, Vite, esbuild, Gro, and Fuz',
+		description: 'website for the Fuz stack',
 		glyph: '🦋',
 		logo: 'logo.svg',
 		logo_alt: 'a friendly pixelated spider facing you',
