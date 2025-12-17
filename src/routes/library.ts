@@ -11,7 +11,6 @@ export const library_json: LibraryJson = {
 		glyph: '🦋',
 		logo: 'logo.svg',
 		logo_alt: 'a friendly pixelated spider facing you',
-		public: true,
 		homepage: 'https://www.fuz.dev/',
 		repository: 'https://github.com/fuzdev/www.fuz.dev',
 		scripts: {
@@ -30,9 +29,9 @@ export const library_json: LibraryJson = {
 		devDependencies: {
 			'@fuzdev/fuz_css': '^0.42.1',
 			'@fuzdev/fuz_ui': '^0.172.0',
-			'@fuzdev/fuz_util': '^0.42.0',
+			'@fuzdev/fuz_util': '^0.44.1',
 			'@ryanatkn/eslint-config': '^0.9.0',
-			'@ryanatkn/gro': '^0.181.0',
+			'@ryanatkn/gro': '^0.182.0',
 			'@sveltejs/adapter-static': '^3.0.10',
 			'@sveltejs/kit': '^2.49.1',
 			'@sveltejs/vite-plugin-svelte': '^6.2.1',

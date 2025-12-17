@@ -4,10 +4,17 @@
 
 > friendly user zystem 🦋 [fuz.dev](https://www.fuz.dev/)
 
-Fuz is a zippy stack for the commons.
+Fuz is a zippy stack for autonomy.
 Today Fuz has a collection of libraries for making modern websites
-with TypeScript, CSS, Svelte, and SvelteKit/Vite,
-and soon they'll be joined by native tools for sovereign software development, written in Rust.
+with TypeScript, CSS, Svelte, and SvelteKit,
+and soon they'll be joined by native tools written in Rust.
+
+Fuz aims to resist [enshittification](https://en.wikipedia.org/wiki/Enshittification)
+by having no investors or profit motive.
+The intent is to form a nonprofit but it's currently only one developer.
+This website will eventually have community spaces,
+for now see the [GitHub discussions](https://github.com/fuzdev/www.fuz.dev/discussions)
+to follow along and maybe help out.
 
 ## License 🐦
 
