@@ -19,17 +19,18 @@
 			<div class="mb_lg p_xs2 shadow_md border_radius_sm">
 				<div class="width_upto_sm panel p_lg shadow_inset_xs bg">
 					<p>
-						Fuz is a zippy stack for digital autonomy. Today Fuz has a collection of libraries for making
-						modern websites with TypeScript, CSS, Svelte, and SvelteKit, and soon they'll be joined
-						by native tools written in Rust.
+						Fuz is a zippy stack for digital autonomy. Today Fuz has a collection of libraries for
+						making modern websites with TypeScript, CSS, Svelte, and SvelteKit, and soon they'll be
+						joined by native tools written in Rust.
 					</p>
 					<p>
 						Fuz aims to resist <a
 							href="https://en.wikipedia.org/wiki/Enshittification"
 							rel="noopener">enshittification</a
 						>
-						by having no investors or profit motive. The intent is to form a nonprofit but it's currently
-						only one developer. This website will eventually have community spaces, for now see the
+						by having no investors or profit motive. The intent is to form a nonprofit but it's a road
+						to get there, and a community would need to form first. This website will eventually have
+						community spaces, for now see the
 						<a href="https://github.com/fuzdev/www.fuz.dev/discussions" rel="noopener"
 							>GitHub discussions</a
 						> to follow along and maybe help out.

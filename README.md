@@ -11,7 +11,8 @@ and soon they'll be joined by native tools written in Rust.
 
 Fuz aims to resist [enshittification](https://en.wikipedia.org/wiki/Enshittification)
 by having no investors or profit motive.
-The intent is to form a nonprofit but it's currently only one developer.
+The intent is to form a nonprofit but it's a road to get there,
+and a community would need to form first.
 This website will eventually have community spaces,
 for now see the [GitHub discussions](https://github.com/fuzdev/www.fuz.dev/discussions)
 to follow along and maybe help out.
