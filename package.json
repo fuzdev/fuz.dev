@@ -1,5 +1,5 @@
 {
-  "name": "www.fuz.dev",
+  "name": "fuz.dev",
   "version": "0.0.1",
   "description": "website for the Fuz stack",
   "motto": "friendly user zystem",
@@ -7,7 +7,7 @@
   "logo": "logo.svg",
   "logo_alt": "a friendly pixelated spider facing you",
   "homepage": "https://www.fuz.dev/",
-  "repository": "https://github.com/fuzdev/www.fuz.dev",
+  "repository": "https://github.com/fuzdev/fuz.dev",
   "scripts": {
     "start": "gro dev",
     "dev": "gro dev",

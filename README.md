@@ -14,7 +14,7 @@ by having no investors or profit motive,
 so the intent is to form a nonprofit; but it's a road to get there,
 and a community would need to form first.
 This website will eventually have community spaces,
-for now see the [GitHub discussions](https://github.com/fuzdev/www.fuz.dev/discussions)
+for now see the [GitHub discussions](https://github.com/fuzdev/fuz.dev/discussions)
 to follow along and maybe help out.
 
 ## License 🐦
