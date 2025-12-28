@@ -1,4 +1,4 @@
-# www.fuz.dev
+# fuz.dev
 
 [<img src="static/logo.svg" alt="a friendly brown spider facing you" align="right" width="192" height="192">](https://www.fuz.dev/)
 
