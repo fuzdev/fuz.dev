@@ -15,7 +15,9 @@
 		<section class="box">
 			<h1 class="mb_sm" style:margin-top={MAIN_HEADER_MARGIN_TOP}>fuz</h1>
 			<div class="box mb_lg"><Svg data={logo_fuz} size="var(--icon_size_xl2)" /></div>
-			<blockquote class="shadow_bottom_sm px_xl shade_00 mb_xl3">friendly user zystem 🦋</blockquote>
+			<blockquote class="shadow_bottom_sm px_xl shade_00 mb_xl3">
+				friendly user zystem 🦋
+			</blockquote>
 			<div class="mb_lg p_xs2 shadow_md border_radius_sm">
 				<div class="width_atmost_sm panel p_lg shadow_inset_xs shade_00">
 					<p>
