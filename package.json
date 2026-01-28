@@ -64,9 +64,5 @@
   ],
   "files": [
     "dist"
-  ],
-  "dependencies": {
-    "@fuzdev/fuz_code": "^0.41.0",
-    "@sveltejs/package": "^2.5.7"
-  }
+  ]
 }
