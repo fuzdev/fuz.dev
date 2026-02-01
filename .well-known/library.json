@@ -75,10 +75,7 @@
 		],
 		"files": [
 			"dist"
-		],
-		"dependencies": {
-			"@fuzdev/fuz_code": "^0.41.0"
-		}
+		]
 	},
 	"source_json": {
 		"name": "fuz.dev",
