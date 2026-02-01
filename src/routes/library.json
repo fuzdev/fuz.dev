@@ -69,10 +69,7 @@
 			]
 		},
 		"sideEffects": ["**/*.css"],
-		"files": ["dist"],
-		"dependencies": {
-			"@fuzdev/fuz_code": "^0.41.0"
-		}
+		"files": ["dist"]
 	},
 	"source_json": {
 		"name": "fuz.dev",
