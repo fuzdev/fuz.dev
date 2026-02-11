@@ -151,6 +151,7 @@
 	--outline_width_active: var(--border_width_1);
 	--outline_width_focus: var(--border_width_2);
 	--shade_00: hsl(var(--tint_hue) var(--tint_saturation) 96%);
+	--shade_05: hsl(var(--tint_hue) var(--tint_saturation) 93%);
 	--shade_10: hsl(var(--tint_hue) var(--tint_saturation) 90%);
 	--shade_30: hsl(var(--tint_hue) var(--tint_saturation) 76%);
 	--shade_50: hsl(var(--tint_hue) var(--tint_saturation) 53%);
@@ -264,6 +265,7 @@
 	--fg_20: var(--lighten_20);
 	--link_color: hsl(var(--hue_a) 61% 58%);
 	--shade_00: hsl(var(--tint_hue) var(--tint_saturation) 6%);
+	--shade_05: hsl(var(--tint_hue) var(--tint_saturation) 9%);
 	--shade_10: hsl(var(--tint_hue) var(--tint_saturation) 12%);
 	--shade_30: hsl(var(--tint_hue) var(--tint_saturation) 26%);
 	--shade_50: hsl(var(--tint_hue) var(--tint_saturation) 48%);
@@ -457,7 +459,7 @@ body {
 	margin-bottom: var(--space_xl7);
 }
 
-:where(.row, .box, .column) > * {
+:where(.row > *) {
 	margin: 0;
 }
 
@@ -1134,6 +1136,9 @@ a.chip {
 .shade_00 {
 	background-color: var(--shade_00);
 }
+.shade_05 {
+	background-color: var(--shade_05);
+}
 .color_a_50 {
 	color: var(--color_a_50);
 	--text_color: var(--color_a_50);
@@ -1203,6 +1208,9 @@ a.chip {
 }
 .p_xs2 {
 	padding: var(--space_xs2);
+}
+.p_sm {
+	padding: var(--space_sm);
 }
 .p_lg {
 	padding: var(--space_lg);
