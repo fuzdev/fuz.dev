@@ -4,7 +4,7 @@
 
 fuz.dev is the public website for the fuz stack and fuzdev nonprofit.
 
-For coding conventions, see [`fuz-stack`](../fuz-stack/CLAUDE.md).
+For coding conventions, see [`fuz_stack`](../fuz_stack/CLAUDE.md).
 
 ## Gro commands
 
