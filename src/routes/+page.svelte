@@ -26,13 +26,9 @@
 						by native tools written in Rust.
 					</p>
 					<p>
-						Fuz aims to resist <a
-							href="https://en.wikipedia.org/wiki/Enshittification"
-							rel="noopener">enshittification</a
-						>
-						by having no investors or profit motive, so the intent is to form a nonprofit; but it's a
-						road to get there, and a community would have to form first. This website will eventually
-						have community spaces, for now see the
+						Fuz has no shareholders or profit motive, so the intent is to form a nonprofit; but it's
+						a road to get there, and a community would have to form first. This website will
+						eventually have community spaces, for now see the
 						<a href="https://github.com/fuzdev/fuz.dev/discussions" rel="noopener"
 							>GitHub discussions</a
 						> to follow along and maybe help out.
