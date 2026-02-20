@@ -10,7 +10,7 @@ with TypeScript, CSS, Svelte, and SvelteKit,
 and soon they'll be joined by native tools written in Rust.
 
 Fuz has no shareholders or profit motive,
-so the intent is to form a nonprofit; but it's a road to get there,
+and the intent is to form a nonprofit; but it's a road to get there,
 and a community would have to form first.
 This website will eventually have community spaces,
 for now see the [GitHub discussions](https://github.com/fuzdev/fuz.dev/discussions)
