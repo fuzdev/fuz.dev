@@ -940,6 +940,30 @@ body {
 	margin-bottom: var(--space_sm);
 }
 
+:where(table) {
+	border-collapse: collapse;
+}
+
+:where(thead) {
+	text-align: left;
+}
+
+:where(th) {
+	font-weight: bold;
+}
+
+:where(th, td) {
+	padding: var(--space_xs3) var(--space_sm);
+}
+
+:where(tr) {
+	border-bottom: 1px solid var(--border_color_10);
+}
+
+:where(tr:hover) {
+	background-color: var(--fg_10);
+}
+
 /* Utility Classes */
 
 .box {
@@ -953,6 +977,12 @@ body {
 	display: flex;
 	flex-direction: row;
 	align-items: center;
+}
+.ellipsis {
+	display: block;
+	white-space: nowrap;
+	overflow: hidden;
+	text-overflow: ellipsis;
 }
 .selectable {
 	--button_fill: color-mix(in hsl, var(--shade_50) 8%, transparent);
@@ -1116,6 +1146,9 @@ a.chip {
 	color: var(--color_j_50);
 	background-color: var(--color_j_10);
 }
+.font_family_mono {
+	font-family: var(--font_family_mono);
+}
 .font_size_md {
 	font-size: var(--font_size_md);
 	--font_size: var(--font_size_md);
@@ -1219,6 +1252,9 @@ a.chip {
 .p_sm {
 	padding: var(--space_sm);
 }
+.p_md {
+	padding: var(--space_md);
+}
 .p_lg {
 	padding: var(--space_lg);
 }
@@ -1268,8 +1304,17 @@ a.chip {
 .mb_xl3 {
 	margin-bottom: var(--space_xl3);
 }
+.mb_xl5 {
+	margin-bottom: var(--space_xl5);
+}
+.mb_xl7 {
+	margin-bottom: var(--space_xl7);
+}
 .mb_xl9 {
 	margin-bottom: var(--space_xl9);
+}
+.gap_xs2 {
+	gap: var(--space_xs2);
 }
 .align-items\:center {
 	align-items: center;
@@ -1288,6 +1333,12 @@ a.chip {
 }
 .height\:100\% {
 	height: 100%;
+}
+.position\:relative {
+	position: relative;
+}
+.text-align\:center {
+	text-align: center;
 }
 .width\:100\% {
 	width: 100%;

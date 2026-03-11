@@ -35,6 +35,7 @@
 		"devDependencies": {
 			"@fuzdev/fuz_code": "^0.45.1",
 			"@fuzdev/fuz_css": "^0.53.0",
+			"@fuzdev/fuz_gitops": "^0.67.0",
 			"@fuzdev/fuz_ui": "^0.185.1",
 			"@fuzdev/fuz_util": "^0.52.0",
 			"@fuzdev/gro": "^0.195.0",
@@ -82,6 +83,44 @@
 	"source_json": {
 		"name": "fuz.dev",
 		"version": "0.0.1",
-		"modules": []
+		"modules": [
+			{
+				"path": "gitops_analyze.task.ts",
+				"declarations": []
+			},
+			{
+				"path": "gitops_plan.task.ts",
+				"declarations": []
+			},
+			{
+				"path": "gitops_publish.task.ts",
+				"declarations": []
+			},
+			{
+				"path": "gitops_run.task.ts",
+				"declarations": [
+					{
+						"name": "Args",
+						"kind": "type",
+						"source_line": 2,
+						"type_signature": "ZodObject<{ command: ZodString; config: ZodDefault<ZodString>; concurrency: ZodDefault<ZodNumber>; format: ZodDefault<ZodEnum<{ json: \"json\"; text: \"text\"; }>>; }, $strict>"
+					},
+					{
+						"name": "task",
+						"kind": "variable",
+						"source_line": 2,
+						"type_signature": "Task<{ command: string; config: string; concurrency: number; format: \"json\" | \"text\"; }, ZodType<Args, Args, $ZodTypeInternals<Args, Args>>, unknown>"
+					}
+				]
+			},
+			{
+				"path": "gitops_sync.task.ts",
+				"declarations": []
+			},
+			{
+				"path": "gitops_validate.task.ts",
+				"declarations": []
+			}
+		]
 	}
 }
