@@ -2,7 +2,7 @@
 	import '$routes/fuz.css';
 
 	import type {Snippet} from 'svelte';
-	import Themed from '@fuzdev/fuz_ui/Themed.svelte';
+	import ThemeRoot from '@fuzdev/fuz_ui/ThemeRoot.svelte';
 	import ContextmenuRoot from '@fuzdev/fuz_ui/ContextmenuRoot.svelte';
 	import {library_context, Library} from '@fuzdev/fuz_ui/library.svelte.js';
 	import Spiders from '@fuzdev/fuz_ui/Spiders.svelte';
@@ -22,9 +22,9 @@
 	<title>Fuz - friendly user zystem</title>
 </svelte:head>
 
-<Themed>
+<ThemeRoot>
 	<ContextmenuRoot>
 		{@render children()}
 		<Spiders />
 	</ContextmenuRoot>
-</Themed>
+</ThemeRoot>
