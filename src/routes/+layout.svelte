@@ -20,7 +20,7 @@
 </script>
 
 <svelte:head>
-	<title>@fuzdev/fuz_template</title>
+	<title>Fuz - friendly user zystem</title>
 </svelte:head>
 
 <ThemeRoot>

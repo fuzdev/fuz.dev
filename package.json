@@ -1,7 +1,7 @@
 {
   "name": "@fuzdev/fuz_template",
   "version": "0.0.1",
-  "description": "a web app template with TypeScript + SvelteKit + optional Rust for the fuz-stack",
+  "description": "homepage for Fuz, free software for human agency",
   "glyph": "❄",
   "logo": "logo.svg",
   "logo_alt": "a friendly pixelated spider facing you",

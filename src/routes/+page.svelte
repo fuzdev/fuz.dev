@@ -1,57 +1,44 @@
 <script lang="ts">
+	import DocsFooter from '@fuzdev/fuz_ui/DocsFooter.svelte';
+	import ProjectLinks from '@fuzdev/fuz_ui/ProjectLinks.svelte';
 	import Svg from '@fuzdev/fuz_ui/Svg.svelte';
 	import {logo_fuz} from '@fuzdev/fuz_ui/logos.ts';
-	import {resolve} from '$app/paths';
-	import {random_item} from '@fuzdev/fuz_util/random.ts';
-	import ColorSchemeInput from '@fuzdev/fuz_ui/ColorSchemeInput.svelte';
-	import ThemeInput from '@fuzdev/fuz_ui/ThemeInput.svelte';
-
-	import Mreows, {mreow_items} from '$lib/Mreows.svelte';
-
-	let mreows: Array<{glyph: string}> | undefined = $state.raw([
-		random_item(mreow_items),
-		mreow_items[4]!,
-	]);
+	import {MAIN_HEADER_MARGIN_TOP} from '@fuzdev/fuz_ui/constants.ts';
 </script>
 
-<main>
-	<section class="box">
-		<header class="box pt_xl">
-			<Svg data={logo_fuz} size="var(--icon_size_xl)" />
-			<h1 class="mt_xl2">fuz_template</h1>
-		</header>
-		<div class="column gap_lg">
-			<a href={resolve('/about')} class="panel px_xl py_md font_size_xl2 text-align:center">about</a
-			>
-			<a href={resolve('/docs')} class="panel px_xl py_md font_size_xl2 text-align:center">docs</a>
-		</div>
-	</section>
-	<!-- this section self-removes on eject: molt replaces this whole page -->
-	<section class="box panel p_lg width_atmost_sm">
-		<p>
-			This is the deployed demo of
-			<a href="https://github.com/fuzdev/fuz_template">fuz_template</a>, a starter for building web
-			and native apps and tools with the <a href="https://www.fuz.dev/">fuz stack</a>. Clone it (or
-			use GitHub's "Use this template"), then run <code>npm run molt</code> (or its Rust twin
-			<code>cargo molt</code>) to personalize it — the readme also covers a manual path.
-		</p>
-	</section>
-	<section class="box panel">
-		<div class="p_xl box">
-			<h2 class="mt_0">color scheme</h2>
-			<ColorSchemeInput />
-			<h2>theme</h2>
-			<ThemeInput />
-		</div>
-	</section>
-	<Mreows bind:mreows />
+<main class="box width:100%">
+	<div class="box width_atmost_md mb_xl9">
+		<section class="box">
+			<h1 class="mb_sm" style:margin-top={MAIN_HEADER_MARGIN_TOP}>fuz</h1>
+			<div class="box mb_lg"><Svg data={logo_fuz} size="var(--icon_size_xl2)" /></div>
+			<blockquote class="unstyled panel p_sm shadow_bottom_sm px_xl 16shade_05 mb_xl3">
+				friendly user zystem 🦋
+			</blockquote>
+			<div class="mb_lg p_xs2 shadow_md border_radius_sm">
+				<div class="width_atmost_sm panel p_lg shadow_inset_xs shade_00">
+					<p>
+						Fuz is a zippy stack for human agency. What that means is for you to decide! Today Fuz
+						has a collection of libraries for making modern websites with TypeScript, CSS, Svelte,
+						and SvelteKit, and soon they'll be joined by native tools written in Rust. It's free
+						software all the way down.
+					</p>
+					<p>
+						Fuz has been quietly built in public full-time since 2019. The project has no
+						shareholders or profit motive, and the plan is to have nonprofit stewardship; but it's a
+						road to get there, and a community would have to form first. This website will
+						eventually have community spaces, for now see the
+						<a href="https://github.com/fuzdev/fuz.dev/discussions" rel="noopener"
+							>GitHub discussions</a
+						> to follow along and maybe help out.
+					</p>
+				</div>
+			</div>
+		</section>
+		<section class="panel p_lg shadow_inset_xs">
+			<ProjectLinks />
+		</section>
+		<section>
+			<DocsFooter repo_url="https://github.com/fuzdev" />
+		</section>
+	</div>
 </main>
-
-<style>
-	main {
-		display: flex;
-		flex-direction: column;
-		align-items: center;
-		margin: 0 auto;
-	}
-</style>
