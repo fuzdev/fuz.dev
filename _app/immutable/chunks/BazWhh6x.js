@@ -1,0 +1,1 @@
+const o="fuz.dev",e="0.0.1",s="homepage for Fuz, free software for human agency";const t="logo.svg",n="a friendly brown spider";const c="https://www.fuz.dev/",r="https://github.com/fuzdev/fuz.dev",p={name:o,version:e,private:!0,description:s,glyph:"🦋",logo:t,logo_alt:n,license:"MIT",homepage:c,repository:r};export{p};
