@@ -1,6 +1,6 @@
 # fuz.dev
 
-[<img src="static/logo.svg" alt="a friendly pixelated spider facing you" align="right" width="192" height="192">](https://www.fuz.dev/)
+[<img src="static/logo.svg" alt="a friendly brown spider" align="right" width="192" height="192">](https://www.fuz.dev/)
 
 > homepage for Fuz, free software for human agency 🦋 [fuz.dev](https://www.fuz.dev/)
 

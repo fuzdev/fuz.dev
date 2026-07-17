@@ -15,6 +15,11 @@ export default {
 		alias: {$routes: 'src/routes'},
 		version: {name: execSync('git rev-parse HEAD').toString().trim()},
 
+		// The docs API module route (`/docs/api/[...module_path]`) is dynamic and has
+		// no entries to crawl until library code lands in `src/lib`, so warn on the
+		// unseen route instead of failing the static build.
+		prerender: {handleUnseenRoutes: 'warn'},
+
 		// Example CSP using https://ui.fuz.dev/docs/csp
 		//
 		// import {create_csp_directives} from '@fuzdev/fuz_ui/csp.js';
