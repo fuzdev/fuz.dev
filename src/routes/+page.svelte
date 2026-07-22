@@ -2,8 +2,8 @@
 	import DocsFooter from '@fuzdev/fuz_ui/DocsFooter.svelte';
 	import ProjectLinks from '@fuzdev/fuz_ui/ProjectLinks.svelte';
 	import Svg from '@fuzdev/fuz_ui/Svg.svelte';
-	import {logo_fuz} from '@fuzdev/fuz_ui/logos.ts';
-	import {MAIN_HEADER_MARGIN_TOP} from '@fuzdev/fuz_ui/constants.ts';
+	import { logo_fuz } from '@fuzdev/fuz_ui/logos.ts';
+	import { MAIN_HEADER_MARGIN_TOP } from '@fuzdev/fuz_ui/constants.ts';
 </script>
 
 <main class="box width:100%">
