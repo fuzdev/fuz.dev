@@ -124,6 +124,6 @@ Deploy with `gro deploy` (builds and pushes to the deploy branch).
 
 - TypeScript strict mode
 - Svelte 5 with runes API
-- Prettier with tabs, 100 char width
+- tsv with tabs, 100 char width
 - Node >= 24.14
 - Private package (not published to npm)

@@ -27,9 +27,9 @@
 						shareholders or profit motive, and the plan is to have nonprofit stewardship; but it's a
 						road to get there, and a community would have to form first. This website will
 						eventually have community spaces, for now see the
-						<a href="https://github.com/fuzdev/fuz.dev/discussions" rel="noopener"
-							>GitHub discussions</a
-						> to follow along and maybe help out.
+						<a href="https://github.com/fuzdev/fuz.dev/discussions" rel="noopener">
+							GitHub discussions
+						</a> to follow along and maybe help out.
 					</p>
 				</div>
 			</div>
