@@ -8,7 +8,8 @@ Everyone is welcome to participate in the Fuz community spaces:
     the [fuzdev org discussions](https://github.com/orgs/fuzdev/discussions)
   - issues (bug reports and triage - when in doubt use discussions)
   - PRs are accepted from people who know what they're doing -
-    design input in discussions is generally more valued by the maintainers than code changes
+    the maintainers generally value feedback and design input in discussions
+    more than code changes (because figuring out what to build is harder than implementing)
   - Bluesky as [fuz.dev](https://bsky.app/profile/fuz.dev)
 - the Fuz community seeks quality and clarity
   - LLMs/AI tool usage is acceptable; disclose usage when appropriate
