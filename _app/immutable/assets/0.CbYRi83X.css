@@ -910,6 +910,7 @@ body {
 .py_xs { padding-top: var(--space_xs);	padding-bottom: var(--space_xs); }
 .mt_0 { margin-top: 0; }
 .mt_xl2 { margin-top: var(--space_xl2); }
+.mb_0 { margin-bottom: 0; }
 .mb_sm { margin-bottom: var(--space_sm); }
 .mb_lg { margin-bottom: var(--space_lg); }
 .mb_xl2 { margin-bottom: var(--space_xl2); }
