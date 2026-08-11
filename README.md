@@ -23,7 +23,7 @@ This is a static SvelteKit site built on
 
 ## Contributing
 
-[www.fuz.dev/contributing](https://www.fuz.dev/contributing)
+[fuz.dev/contributing](https://www.fuz.dev/contributing)
 
 ## License
 
