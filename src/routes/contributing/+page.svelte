@@ -18,13 +18,10 @@
 		<section class="box">
 			<header class="box pt_xl">
 				<Svg data={logo_fuz} size="var(--icon_size_xl)" />
-				<h1 class="mt_xl2">contributing to Fuz</h1>
+				<h1 class="mt_xl2 mb_0">contributing to Fuz</h1>
 			</header>
-			<div style:--font_size="var(--font_size_xl)">
-				<Breadcrumb />
-			</div>
 		</section>
-		<section class="panel p_lg shadow_inset_xs mb_lg">
+		<section class="panel p_lg shadow_inset_xs">
 			<p>
 				Fuz is an intended nonprofit that stewards a collection of open source free software
 				projects. Everyone is welcome to participate.
@@ -61,6 +58,11 @@
 				<a href="https://github.com/fuzdev/.github/blob/main/CODE_OF_CONDUCT.md">Code of Conduct</a>
 				is the <a href="https://contributor-covenant.org/">Contributor Covenant</a>.
 			</p>
+		</section>
+		<section>
+			<div style:--font_size="var(--font_size_lg)">
+				<Breadcrumb />
+			</div>
 		</section>
 		<section>
 			<DocsFooter repo_url={site.repo_url} root_url={FUZ_DEV_URL} />
