@@ -6,7 +6,7 @@ Everyone is welcome to participate in the Fuz community spaces:
 - contributions to Fuz take many forms in public:
   - discussions on GitHub - see each repo and
     the [fuzdev org discussions](https://github.com/orgs/fuzdev/discussions)
-  - issues (bugs)
+  - issues (bug reports and triage - when in doubt use discussions)
   - PRs are accepted from people who know what they're doing -
     design input in discussions is generally more valued by the maintainers than code changes
   - Bluesky as [fuz.dev](https://bsky.app/profile/fuz.dev)
