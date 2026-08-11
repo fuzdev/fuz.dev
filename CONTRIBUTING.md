@@ -3,9 +3,9 @@
 - Fuz is an intended nonprofit that stewards a collection of open source free software projects
 - all people are welcome to participate in the Fuz community spaces
 - contributions to Fuz take many forms in public:
-  - [issues](https://github.com/fuzdev/fuz.dev/issues) (bugs)
-  - [discussions](https://github.com/fuzdev/fuz.dev/discussions)
-  - [PRs](https://github.com/fuzdev/fuz.dev/pulls) are accepted from people who know what they're doing
+  - discussions on GitHub per repo
+  - issues (bugs)
+  - PRs are accepted from people who know what they're doing
   - Bluesky (TODO create fuz.dev account)
   - everything else - blogging, *eddit, etc
 - the Fuz community seeks quality and clarity
