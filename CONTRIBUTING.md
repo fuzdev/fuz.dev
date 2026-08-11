@@ -1,7 +1,7 @@
 # Contributing to Fuz
 
 Fuz is an intended nonprofit that stewards a collection of open source free software projects.
-Everyone is welcome to participate in the Fuz community spaces:
+Everyone is welcome to participate:
 
 - contributions to Fuz take many forms in public:
   - discussions on GitHub - see each repo and
