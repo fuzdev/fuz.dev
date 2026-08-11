@@ -1,0 +1,1 @@
+import{d as i,E as h}from"./DNJoujLi.js";import{B as f}from"./4c648SXc.js";function b(n,t,...s){var a=new f(n);i(()=>{const r=t()??null;a.ensure(r,r&&(e=>r(e,...s)))},h)}const m=(n,t)=>!t||!n.startsWith(t)?n:n.substring(t.length),o=(n,t)=>!t||!n.endsWith(t)?n:n.substring(0,n.length-t.length),u=(n,t)=>n.endsWith(t)?n:n+t;export{b as a,o as b,u as e,m as s};
