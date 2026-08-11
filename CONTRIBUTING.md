@@ -12,7 +12,7 @@ Everyone is welcome to participate:
     more than code changes (because figuring out what to build is harder than implementing)
   - Bluesky as [fuz.dev](https://bsky.app/profile/fuz.dev)
 - the Fuz community seeks quality and clarity
-  - LLMs/AI tool usage is acceptable; disclose usage when appropriate
+  - LLMs/AI tool usage is acceptable; disclose when appropriate
     (this is always a judgment call, when in doubt please err on the side of transparency)
   - be aware slop causes frowns and reputational damage
   - be aware your posts and PRs cost people's time and attention
