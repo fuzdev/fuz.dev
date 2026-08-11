@@ -26,10 +26,12 @@
 						Fuz has been quietly built in public full-time since 2019. The project has no
 						shareholders or profit motive, and the plan is to have nonprofit stewardship; but it's a
 						road to get there, and a community would have to form first. This website will
-						eventually have community spaces, for now see the
-						<a href="https://github.com/fuzdev/fuz.dev/discussions" rel="noopener">
-							GitHub discussions
-						</a> to follow along and maybe help out.
+						eventually have community spaces; for more see
+						<a href="https://github.com/fuzdev/fuz.dev/blob/main/CONTRIBUTING.md" rel="noopener">
+							CONTRIBUTING.md
+						</a>
+						and the fuzdev org
+						<a href="https://github.com/orgs/fuzdev/discussions">discussions on GitHub</a>.
 					</p>
 				</div>
 			</div>

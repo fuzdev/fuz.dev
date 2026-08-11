@@ -21,6 +21,10 @@ to follow along and maybe help out.
 This is a static SvelteKit site built on
 [fuz_template](https://github.com/fuzdev/fuz_template) and the fuz stack.
 
+## Contributing
+
+[CONTRIBUTING.md](CONTRIBUTING.md)
+
 ## License
 
 [MIT](LICENSE)
