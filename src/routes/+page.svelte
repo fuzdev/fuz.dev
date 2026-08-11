@@ -29,7 +29,9 @@
 						eventually have community spaces; for more see
 						<a href="https://github.com/fuzdev/fuz.dev/blob/main/CONTRIBUTING.md" rel="noopener">
 							CONTRIBUTING.md
-						</a>.
+						</a>
+						and the fuzdev org
+						<a href="https://github.com/orgs/fuzdev/discussions">discussions on GitHub</a>.
 					</p>
 				</div>
 			</div>
