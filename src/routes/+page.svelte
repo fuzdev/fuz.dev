@@ -4,6 +4,7 @@
 	import Svg from '@fuzdev/fuz_ui/Svg.svelte';
 	import { logo_fuz } from '@fuzdev/fuz_ui/logos.ts';
 	import { MAIN_HEADER_MARGIN_TOP } from '@fuzdev/fuz_ui/constants.ts';
+	import { resolve } from '$app/paths';
 </script>
 
 <main class="box width:100%">
@@ -27,9 +28,7 @@
 						shareholders or profit motive, and the plan is to have nonprofit stewardship; but it's a
 						road to get there, and a community would have to form first. This website will
 						eventually have community spaces; for more see
-						<a href="https://github.com/fuzdev/fuz.dev/blob/main/CONTRIBUTING.md" rel="noopener">
-							CONTRIBUTING.md
-						</a>
+						<a href={resolve('/contributing')}>contributing</a>
 						and the fuzdev org
 						<a href="https://github.com/orgs/fuzdev/discussions">discussions on GitHub</a>.
 					</p>
