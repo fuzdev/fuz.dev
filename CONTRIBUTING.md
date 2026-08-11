@@ -12,7 +12,7 @@
   - LLMs/AI tool usage is acceptable, disclose usage when appropriate
   - be aware slop causes frowns and reputational damage
   - be aware every action you take in public spaces costs people's time and attention
-- please be kind and respectful and honest
+- please be kind and respectful and honest, and creative
 
 ## Code of Conduct
 
