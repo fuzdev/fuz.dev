@@ -9,12 +9,10 @@
   - Bluesky (TODO create fuz.dev account)
   - everything else - blogging, *eddit, etc
 - the Fuz community seeks quality and clarity
-  - LLMs/AI tool usage is acceptable when disclosed
+  - LLMs/AI tool usage is acceptable, disclose usage when appropriate
+  - be aware slop causes frowns and reputational damage
   - be aware every action you take in public spaces costs people's time and attention
-- be respectful of others
-  - waste nobody's time
-  - bring your best and grow from mistakes
-  - assume kindness by default
+- please be kind and respectful
 
 ## Code of Conduct
 
