@@ -15,7 +15,7 @@ Everyone is welcome to participate:
   - LLMs/AI tool usage is acceptable; disclose usage when appropriate
     (this is always a judgment call, when in doubt please err on the side of transparency)
   - be aware slop causes frowns and reputational damage
-  - be aware every action you take in public spaces costs people's time and attention
+  - be aware your posts and PRs cost people's time and attention
 - please be kind and respectful and genuine
 
 ## Code of Conduct
