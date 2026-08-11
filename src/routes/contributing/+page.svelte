@@ -32,7 +32,7 @@
 					discussions on GitHub - see each repo and the
 					<a href="https://github.com/orgs/fuzdev/discussions">fuzdev org discussions</a>
 				</li>
-				<li>issues (bug reports and triage - when in doubt use discussions)</li>
+				<li>issues for bug reports and triage - when in doubt, prefer discussions over issues</li>
 				<li>
 					PRs are accepted from people who know what they're doing - the maintainers generally value
 					feedback and design input in discussions more than code changes (because figuring out what
@@ -43,11 +43,11 @@
 			<p>The Fuz community seeks quality and clarity:</p>
 			<ul>
 				<li>
-					LLMs/AI tool usage is acceptable; disclose when appropriate (this is always a judgment
-					call, when in doubt please err on the side of transparency)
+					LLMs/AI tool usage is acceptable - please disclose when appropriate (this is always a judgment
+					call; err on the side of transparency)
 				</li>
-				<li>be aware slop causes frowns and reputational damage</li>
-				<li>be aware your posts and PRs cost people's time and attention</li>
+				<li>be aware that sharing slop causes frowns and reputational damage</li>
+				<li>be aware that your posts and PRs cost people's time and attention</li>
 			</ul>
 			<p>
 				To report a security vulnerability, see
