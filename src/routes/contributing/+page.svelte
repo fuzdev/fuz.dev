@@ -47,7 +47,7 @@
 					judgment call; err towards transparency)
 				</li>
 				<li>be aware that sharing slop causes frowns and reputational damage</li>
-				<li>be aware that submitting posts and PRs cost people's time and attention</li>
+				<li>be aware that submitting posts and PRs costs people's time and attention</li>
 				<li>
 					participants in Fuz community spaces are encouraged to stay on topic and bring their
 					genuine human perspectives
