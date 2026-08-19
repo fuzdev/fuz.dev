@@ -34,20 +34,24 @@
 				</li>
 				<li>issues for bug reports and triage - when in doubt, prefer discussions over issues</li>
 				<li>
-					PRs are accepted from people who know what they're doing - the maintainers generally value
-					discussions more than code changes (because figuring out what to build is harder than
-					implementing)
+					PRs are accepted but are de-emphasized as a form of contribution - Fuz maintainers
+					generally value discussions more than code changes (because figuring out what to build is
+					harder than implementing)
 				</li>
 				<li>Bluesky as <a href="https://bsky.app/profile/fuz.dev">fuz.dev</a></li>
 			</ul>
 			<p>The Fuz community seeks quality and clarity:</p>
 			<ul>
 				<li>
-					LLMs/AI tool usage is acceptable - please disclose when appropriate (this is always a judgment
-					call; err on the side of transparency)
+					LLMs/AI tool usage is acceptable - please disclose when appropriate (this is always a
+					judgment call; err towards transparency)
 				</li>
 				<li>be aware that sharing slop causes frowns and reputational damage</li>
-				<li>be aware that your posts and PRs cost people's time and attention</li>
+				<li>be aware that submitting posts and PRs cost people's time and attention</li>
+				<li>
+					participants in Fuz community spaces are encouraged to stay on topic and bring their
+					genuine human perspectives
+				</li>
 			</ul>
 			<p>
 				To report a security vulnerability, see
