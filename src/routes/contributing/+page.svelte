@@ -35,8 +35,8 @@
 				<li>issues for bug reports and triage - when in doubt, prefer discussions over issues</li>
 				<li>
 					PRs are accepted from people who know what they're doing - the maintainers generally value
-					feedback and design input in discussions more than code changes (because figuring out what
-					to build is harder than implementing)
+					discussions more than code changes (because figuring out what to build is harder than
+					implementing)
 				</li>
 				<li>Bluesky as <a href="https://bsky.app/profile/fuz.dev">fuz.dev</a></li>
 			</ul>
@@ -54,7 +54,7 @@
 				<a href="https://github.com/fuzdev/.github/blob/main/SECURITY.md">SECURITY.md</a>.
 			</p>
 			<p>
-				Please be kind and respectful and genuine. The Fuz
+				The Fuz
 				<a href="https://github.com/fuzdev/.github/blob/main/CODE_OF_CONDUCT.md">Code of Conduct</a>
 				is the <a href="https://contributor-covenant.org/">Contributor Covenant</a>.
 			</p>
