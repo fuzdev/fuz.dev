@@ -36,7 +36,7 @@
 				<li>
 					PRs are accepted but are de-emphasized as a form of contribution - Fuz maintainers
 					generally value discussions more than code changes (because figuring out what to build is
-					harder than implementing)
+					harder than implementing, and PRs cost significant time and attention)
 				</li>
 				<li>Bluesky as <a href="https://bsky.app/profile/fuz.dev">fuz.dev</a></li>
 			</ul>
