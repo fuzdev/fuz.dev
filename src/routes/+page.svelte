@@ -28,8 +28,7 @@
 						shareholders or profit motive, and the plan is to have nonprofit stewardship; but it's a
 						road to get there, and a community would have to form first. This website will
 						eventually have community spaces; for more see
-						<a href={resolve('/contributing')}>contributing</a>
-						and the fuzdev org
+						<a href={resolve('/contributing')}>contributing</a> and the fuzdev org
 						<a href="https://github.com/orgs/fuzdev/discussions">discussions on GitHub</a>.
 					</p>
 				</div>
