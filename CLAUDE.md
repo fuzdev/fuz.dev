@@ -8,12 +8,6 @@ docs hub is planned to join the homepage.
 
 For coding conventions, see Skill(fuz-stack).
 
-## Committing
-
-`git add` and `git commit` are pre-approved here — commit short 1-liners
-at sensible stopping points (`fix:` / `docs:` / `feat:` / `refactor:` /
-`chore:` prefix, no body, no trailers, no `Co-Authored-By`).
-
 ## Gro commands
 
 ```bash
