@@ -38,7 +38,7 @@
 					generally value discussions more than code changes (because figuring out what to build is
 					harder than implementing, and PRs cost significant time and attention)
 				</li>
-				<li>Bluesky as <a href="https://bsky.app/profile/fuz.dev">fuz.dev</a></li>
+				<li>Bluesky as <a href="https://bsky.app/profile/fuz.dev">@fuz.dev</a></li>
 			</ul>
 			<p>The Fuz community seeks quality and clarity:</p>
 			<ul>
