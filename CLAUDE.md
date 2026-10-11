@@ -25,10 +25,10 @@ gro sync      # regenerate files and run svelte-kit sync
 - SvelteKit — application framework with the static adapter
 - Vite — build tool
 - `@fuzdev/fuz_css` — semantic-first CSS framework and design system
-- `@fuzdev/fuz_ui` — UI components, theming, docs system
+- `@fuzdev/fuz_ui` — UI components and theming
 - `@fuzdev/fuz_util` — utility functions
-- `@fuzdev/fuz_code` — syntax highlighting
-- `@fuzdev/mdz` — minimal markdown dialect
+- `@fuzdev/fuz_code` — syntax highlighting (its Svelte preprocessor and theme)
+- `@fuzdev/mdz` — minimal markdown dialect (its Svelte preprocessor)
 - `@fuzdev/gro` — build system and task runner
 
 ## Scope
@@ -37,7 +37,8 @@ fuz.dev is a **static site**:
 
 - Prerendered with `@sveltejs/adapter-static`
 - Dark/light theme with persistence
-- Documentation system with auto-generated API docs
+- A few hand-written pages — no docs system or `src/lib/` yet (the docs hub is
+  planned)
 - No authentication, database, or dynamic server-side content
 
 ## Architecture
@@ -46,23 +47,17 @@ fuz.dev is a **static site**:
 
 ```
 src/
-├── app.html               # HTML entry with theme detection
-├── lib/                   # library code
+├── app.html                  # HTML entry with theme detection
+├── app.d.ts                  # virtual module types (fuz.css, pkg.json)
 ├── test/
-│   └── example.test.ts    # example test
+│   └── example.test.ts       # example test
 └── routes/
-    ├── +layout.svelte     # root layout with fuz_css imports + site_context
-    ├── +layout.ts         # prerender: true, ssr: true
-    ├── +page.svelte       # home page
-    ├── style.css          # custom global styles
-    ├── library.ts         # library metadata for the docs
+    ├── +layout.svelte        # root layout with fuz_css imports + site_context
+    ├── +layout.ts            # prerender: true, ssr: true
+    ├── +page.svelte          # home page
+    ├── style.css             # custom global styles
     ├── about/+page.svelte
-    └── docs/              # documentation pages
-        ├── +layout.svelte # wraps docs in the Docs component + library_context
-        ├── +page.svelte   # docs index
-        ├── tomes.ts       # documentation structure
-        ├── library/       # library details page
-        └── api/           # auto-generated API docs (+ [...module_path] route)
+    └── contributing/+page.svelte
 ```
 
 ### SvelteKit configuration
@@ -91,18 +86,11 @@ fuz_css utility classes on demand and exposes them via the `virtual:fuz.css`
 module, imported in the root `+layout.svelte`. No generated `fuz.css` file is
 committed.
 
-### Documentation system
+### Site metadata
 
-Uses fuz_ui's tome system and the `svelte-docinfo` Vite plugin:
-
-- `docs/tomes.ts` — defines documentation pages
-- `docs/library/` — shows the `LibraryDetail` component
-- `docs/api/` — auto-generated API docs from `virtual:svelte-docinfo`
-- `docs/api/[...module_path]/` — dynamic module documentation
-
-`src/routes/library.ts` combines the `virtual:svelte-docinfo` metadata with
-`package.json` via `library_json_from_modules`; `docs/+layout.svelte` sets the
-`library_context`, while the root layout sets only the lighter `site_context`.
+The `vite_plugin_pkg_json` Vite plugin (from fuz_ui) exposes `package.json` as
+the `virtual:pkg.json` module; the root `+layout.svelte` builds the
+`site_context` from it (`glyph` and `repo_url` derive from it).
 
 ## Static deployment
 
