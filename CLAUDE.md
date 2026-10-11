@@ -69,8 +69,10 @@ src/
 
 - `+layout.ts` exports `prerender = true` and `ssr = true` for full static
   generation
-- `svelte.config.js` enables runes mode and includes a commented-out example
-  CSP config using `create_csp_directives()` from fuz_ui
+- SvelteKit config lives in `vite.config.ts` as the `sveltekit({...})` plugin
+  options (there is no `svelte.config.js`): runes mode, the mdz and fuz_code
+  preprocessors, root-absolute paths, the git commit as the app version, and a
+  commented-out example CSP config using `create_csp_directives()` from fuz_ui
 - Uses `@sveltejs/adapter-static` for static output
 
 ### Theme detection
