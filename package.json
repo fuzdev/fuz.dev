@@ -5,7 +5,7 @@
   "glyph": "🦋",
   "logo": "logo.svg",
   "logo_alt": "a friendly brown spider",
-  "license": "MIT",
+  "license": "0BSD",
   "private": true,
   "homepage": "https://www.fuz.dev/",
   "repository": "https://github.com/fuzdev/fuz.dev",

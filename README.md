@@ -27,4 +27,4 @@ This is a static SvelteKit site built on
 
 ## License
 
-[MIT](LICENSE)
+[0BSD](LICENSE)
