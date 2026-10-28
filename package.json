@@ -4,7 +4,7 @@
   "description": "homepage for Fuz, free software for human agency",
   "glyph": "🦋",
   "logo": "logo.svg",
-  "logo_alt": "a friendly brown spider",
+  "logo_alt": "a friendly brown spider facing you",
   "license": "0BSD",
   "private": true,
   "homepage": "https://www.fuz.dev/",
