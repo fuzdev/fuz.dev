@@ -37,8 +37,8 @@ fuz.dev is a **static site**:
 
 - Prerendered with `@sveltejs/adapter-static`
 - Dark/light theme with persistence
-- A few hand-written pages — no docs system or `src/lib/` yet (the docs hub is
-  planned)
+- A few hand-written pages plus a fuz_blog blog — no docs system yet (the docs
+  hub is planned); `src/lib/` only re-exports fuz_blog's gen and tasks
 - No authentication, database, or dynamic server-side content
 
 ## Architecture
@@ -56,7 +56,10 @@ src/
     ├── +layout.ts            # prerender: true, ssr: true
     ├── +page.svelte          # home page
     ├── style.css             # custom global styles
+    ├── PageLinks.svelte      # about/blog/contributing cards, minus the current page
+    ├── blogs.ts              # fuz_blog registry, input to `src/lib/blog.gen.ts`
     ├── about/+page.svelte
+    ├── blog/                 # fuz_blog posts, index, and generated feed
     └── contributing/+page.svelte
 ```
 

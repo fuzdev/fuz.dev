@@ -6,6 +6,8 @@
 	import Svg from '@fuzdev/fuz_ui/Svg.svelte';
 	import { logo_fuz } from '@fuzdev/fuz_ui/logos.ts';
 
+	import PageLinks from '../PageLinks.svelte';
+
 	const site = site_context.get();
 </script>
 
@@ -65,6 +67,9 @@
 				<a href="https://github.com/fuzdev/.github/blob/main/CODE_OF_CONDUCT.md">Code of Conduct</a>
 				is the <a href="https://contributor-covenant.org/">Contributor Covenant</a>.
 			</p>
+		</section>
+		<section class="box row flex-wrap:wrap gap_xl2">
+			<PageLinks />
 		</section>
 		<section>
 			<div style:--font_size="var(--font_size_lg)">

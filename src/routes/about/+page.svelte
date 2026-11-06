@@ -8,6 +8,8 @@
 	import Svg from '@fuzdev/fuz_ui/Svg.svelte';
 	import { logo_fuz } from '@fuzdev/fuz_ui/logos.ts';
 
+	import PageLinks from '../PageLinks.svelte';
+
 	const site = site_context.get();
 
 	// TODO standardize
@@ -29,6 +31,9 @@
 		</div>
 	</section> -->
 	<EcosystemLinksPanel />
+	<section class="box row flex-wrap:wrap gap_xl2">
+		<PageLinks />
+	</section>
 	<section class="box">
 		<DocsFooter repo_url={site.repo_url} root_url={FUZ_DEV_URL} />
 	</section>

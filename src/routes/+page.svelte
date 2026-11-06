@@ -5,6 +5,8 @@
 	import { logo_fuz } from '@fuzdev/fuz_ui/logos.ts';
 	import { MAIN_HEADER_MARGIN_TOP } from '@fuzdev/fuz_ui/constants.ts';
 	import { resolve } from '$app/paths';
+
+	import PageLinks from './PageLinks.svelte';
 </script>
 
 <main class="box width:100%">
@@ -32,6 +34,9 @@
 					</p>
 				</div>
 			</div>
+		</section>
+		<section class="box row flex-wrap:wrap gap_xl2">
+			<PageLinks />
 		</section>
 		<section class="panel p_lg shadow_inset_xs">
 			<ProjectLinks />
