@@ -11,15 +11,15 @@ and soon they'll be joined by native tools written in Rust.
 It's free software all the way down.
 
 Fuz has been quietly built in public full-time since 2019.
-The project has no shareholders or profit motive,
-and the plan is to have nonprofit stewardship; but it's a road to get there,
-and a community would have to form first.
+The project has one maintainer, no shareholders or profit motive,
+and the plan is to fund it transparently with public donations.
+
 This website will eventually have community spaces;
 for more see [contributing](https://www.fuz.dev/contributing)
 and the fuzdev org [discussions on GitHub](https://github.com/orgs/fuzdev/discussions).
 
 This is a static SvelteKit site built on
-[fuz_template](https://github.com/fuzdev/fuz_template) and the fuz stack.
+[fuz_template](https://github.com/fuzdev/fuz_template) and the [fuz-stack](https://docs.fuz.dev/skills/fuz-stack) skill.
 
 ## Contributing
 
