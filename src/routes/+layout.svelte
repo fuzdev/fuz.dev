@@ -7,6 +7,9 @@
 	import { SiteState, site_context } from '@fuzdev/fuz_ui/site.svelte.ts';
 	import type { Snippet } from 'svelte';
 	import pkg_json from 'virtual:pkg.json';
+	import { to_blog_feed_url } from '@fuzdev/fuz_blog/blog.ts';
+
+	import { blogs } from './blogs.ts';
 
 	const {
 		children
@@ -20,6 +23,14 @@
 
 <svelte:head>
 	<title>Fuz - friendly user zystem</title>
+	{#each blogs as blog (blog.dirname)}
+		<link
+			rel="alternate"
+			type="application/atom+xml"
+			title={blog.feed.title}
+			href={to_blog_feed_url(blog.feed.home_page_url)}
+		/>
+	{/each}
 </svelte:head>
 
 <ThemeRoot>
