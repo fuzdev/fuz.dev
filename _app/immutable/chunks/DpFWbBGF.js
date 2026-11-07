@@ -1,0 +1,1 @@
+import{n as e}from"./Bymyy9Il.js";import"./CboR_Gcf.js";var t=t=>e(t.slice(1));export{t};

@@ -1,0 +1,28 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+
+<feed xmlns="http://www.w3.org/2005/Atom">
+
+  <id>https://www.fuz.dev/blog</id>
+  <title>fuz.dev blog</title>
+  <subtitle>writing about Fuz, a free software stack for human agency</subtitle>
+  <link href="https://www.fuz.dev/blog" />
+  <link href="https://www.fuz.dev/blog/feed.xml" rel="self" type="application/atom+xml" />
+  <updated>2026-11-06T21:15:06.000Z</updated>
+  <icon>https://www.fuz.dev/favicon.png</icon>
+  <author>
+    <name>Ryan Atkinson</name>
+    <email>mail@ryanatkn.com</email>
+    <uri>https://www.ryanatkn.com/</uri>
+  </author>
+  
+  <entry>
+    <id>https://www.fuz.dev/blog/1</id>
+    <title>Fuz is a free software stack for human agency</title>
+    <link rel="alternate" href="https://www.fuz.dev/blog/1-fuz-is-a-free-software-stack-for-human-agency" />
+    <published>2026-11-06T21:15:06.000Z</published>
+    <updated>2026-11-06T21:15:06.000Z</updated>
+    <summary>introducing fuz.dev</summary>
+    <category term="announcement" />
+  </entry>
+
+</feed>
