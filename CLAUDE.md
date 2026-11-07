@@ -63,7 +63,7 @@ src/
     ├── contributing/+page.svelte
     └── stack/
         ├── +page.svelte      # the layered view of the stack, from apps down to foundations
-        └── stack.ts          # its data: layers and pieces with links and language tints
+        └── stack.ts          # its data: layers of pieces (tagline, languages, status, links) and foundation groups
 ```
 
 ### SvelteKit configuration

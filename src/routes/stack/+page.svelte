@@ -9,49 +9,53 @@
 
 	import PageLinks from '../PageLinks.svelte';
 	import {
-		make_layers,
-		fuz_layers,
-		foundation_layers,
-		type StackLayer,
-		type StackPiece
+		stack_layers,
+		foundation_groups,
+		STACK_LANGUAGES,
+		STACK_STATUSES,
+		type StackBadge,
+		type StackPiece,
+		type StackStatus
 	} from './stack.ts';
 
 	const site = site_context.get();
+
+	// legend shows only the tiers the page uses, in declaration order
+	const used_statuses: Array<StackStatus> = (
+		Object.keys(STACK_STATUSES) as Array<StackStatus>
+	).filter((status) => stack_layers.some((layer) => layer.pieces.some((p) => p.status === status)));
 </script>
 
 <svelte:head>
 	<title>the Fuz stack</title>
 </svelte:head>
 
-{#snippet chip(piece: StackPiece)}
-	{#if piece.href}
-		<!-- external sites; the resolve() rule targets internal nav -->
-		<!-- eslint-disable-next-line svelte/no-navigation-without-resolve -->
-		<a class={['chip', 'sized_lg', piece.color]} href={piece.href} rel="noopener">
-			{piece.label}{#if piece.note}<small class="text_50">&nbsp;({piece.note})</small>{/if}
-		</a>
-	{:else}
-		<span class={['chip', 'sized_lg', piece.color]}>
-			{piece.label}{#if piece.note}<small class="text_50">&nbsp;({piece.note})</small>{/if}
-		</span>
-	{/if}
+{#snippet badge(b: StackBadge)}
+	<span class={['chip', 'sized_sm', b.color]} title={b.description}>{b.label}</span>
 {/snippet}
 
-{#snippet band(title: string, layers: ReadonlyArray<StackLayer>)}
-	<h2 class="band-title">{title}</h2>
-	{#each layers as layer (layer.name)}
-		<div class="stack-layer panel p_md">
-			<div class="head column gap_xs2">
-				<h3 class="mt_0 mb_0">{layer.name}</h3>
-				<p class="text_70">{layer.blurb}</p>
-			</div>
-			<div class="pieces row gap_xs flex-wrap:wrap">
-				{#each layer.pieces as piece (piece.label)}
-					{@render chip(piece)}
-				{/each}
-			</div>
+{#snippet piece_row(piece: StackPiece)}
+	<li class="piece">
+		<div class="piece-head">
+			<!-- external sites; the resolve() rule targets internal nav -->
+			<!-- eslint-disable-next-line svelte/no-navigation-without-resolve -->
+			<a class="piece-name" href={piece.site ?? piece.repo} rel="noopener">{piece.name}</a>
+			{@render badge(STACK_STATUSES[piece.status])}
+			{#each piece.languages as language (language)}
+				{@render badge(STACK_LANGUAGES[language])}
+			{/each}
 		</div>
-	{/each}
+		<p class="piece-tagline text_80">
+			{piece.tagline}
+			{#if piece.site}
+				<small class="text_50">
+					·
+					<!-- eslint-disable-next-line svelte/no-navigation-without-resolve -->
+					<a href={piece.repo} rel="noopener">repo</a>
+				</small>
+			{/if}
+		</p>
+	</li>
 {/snippet}
 
 <main class="box width:100%">
@@ -62,49 +66,66 @@
 				<h1 class="mt_xl2">the Fuz stack</h1>
 			</header>
 			<div class="mb_lg p_xs2 shadow_md border_radius_sm">
-				<div class="width_atmost_sm panel p_lg shadow_inset_xs shade_00">
+				<div class="width_atmost_md panel p_lg shadow_inset_xs shade_00">
 					<p>
-						Fuz is a free software stack designed for human agency. It includes tools and libraries
-						written in TypeScript, CSS, Svelte, and Rust, building on open web and native
-						foundations.
-					</p>
-					<p>
-						Fuz provides a lot of software and bakes in some opinions, but it's designed for
-						modularity, so you can use a single piece or whichever parts fit your project. Most of
-						it is pre-1.0 and changes without deprecation; a few libraries are ready for production,
-						and the notes mark what's earliest. All of
-						<a href="https://github.com/fuzdev">the code on GitHub</a> is licensed with the
+						Fuz is a free software stack designed for human agency: tools and libraries in
+						TypeScript, CSS, Svelte, and Rust, building on open web and native foundations. It bakes
+						in some opinions but is designed for modularity, so you can use a single piece or
+						whichever parts fit your project. All of the
+						<a href="https://github.com/fuzdev">code on GitHub</a> is licensed with the
 						public-domain-equivalent 0BSD. For the story behind it, read the
 						<a href={resolve('/blog/1-fuz-is-a-free-software-stack-for-human-agency')}>
 							intro post
 						</a>.
 					</p>
+					<p>
+						Everything is pre-1.0 and changes without deprecation. Each piece below is marked by
+						where it stands:
+					</p>
+					<ul class="legend unstyled">
+						{#each used_statuses as status (status)}
+							<li>
+								{@render badge(STACK_STATUSES[status])}
+								<span class="text_80">{STACK_STATUSES[status].description}</span>
+							</li>
+						{/each}
+					</ul>
 				</div>
 			</div>
 		</section>
 
-		<section class="stack band-make mb_lg">
-			{@render band('what you make', make_layers)}
-		</section>
+		<section class="width:100%">
+			{#each stack_layers as layer (layer.name)}
+				<div class="panel p_md mb_xl">
+					<h2 class="mb_lg">{layer.name}</h2>
+					<p class="text_80">{layer.blurb}</p>
+					<ul class="pieces unstyled">
+						{#each layer.pieces as piece (piece.name)}
+							{@render piece_row(piece)}
+						{/each}
+					</ul>
+				</div>
+			{/each}
 
-		<section class="stack band-fuz mb_lg">
-			{@render band('what Fuz makes', fuz_layers)}
-		</section>
-
-		<section class="stack band-foundations mb_xl2">
-			{@render band('what it rests on', foundation_layers)}
-		</section>
-
-		<section class="width_atmost_sm">
-			<aside>
-				<p>
-					Fuz code runs in the browser, on JS servers, and natively in Rust, locally or in the
-					cloud. The design bridges them with one data model: mutable <strong>cells</strong> that
-					reference immutable <strong>facts</strong> (content-addressed bytes), changed by
-					<strong>actions</strong> (schema-validated, serializable calls). The same model shows up
-					in each environment, shaped to fit it.
-				</p>
-			</aside>
+			<div class="panel p_md">
+				<h2 class="mb_lg">what it rests on</h2>
+				<p class="text_80">Open technologies Fuz builds on, none of them Fuz's own.</p>
+				<ul class="unstyled">
+					{#each foundation_groups as group (group.name)}
+						<li class="foundation">
+							<div class="foundation-head">
+								<h3 class="mt_0 mb_0">{group.name}</h3>
+								<div class="row gap_xs2 flex-wrap:wrap">
+									{#each group.items as item (item)}
+										<span class="chip sized_sm">{item}</span>
+									{/each}
+								</div>
+							</div>
+							<p class="text_70 mb_0">{group.blurb}</p>
+						</li>
+					{/each}
+				</ul>
+			</div>
 		</section>
 
 		<section class="box row flex-wrap:wrap gap_xl2">
@@ -128,38 +149,50 @@
 		align-items: center;
 		margin: 0 auto;
 	}
-	.band-title {
-		margin-bottom: var(--space_sm);
+	.legend li {
+		display: flex;
+		align-items: baseline;
+		gap: var(--space_xs);
+		margin-bottom: var(--space_xs2);
 	}
-	.stack {
+	.pieces {
 		display: flex;
 		flex-direction: column;
-		gap: var(--space_xs2);
-		width: 100%;
 	}
-	.stack-layer {
+	.piece {
+		padding: var(--space_sm) 0;
+		border-top: var(--border_width_1) var(--border_style) var(--border_color_20);
+	}
+	.piece:last-child {
+		padding-bottom: 0;
+	}
+	.piece-head {
+		display: flex;
+		flex-wrap: wrap;
+		align-items: baseline;
+		gap: var(--space_xs);
+	}
+	.piece-name {
+		font-size: var(--font_size_lg);
+		font-weight: 600;
+		margin-right: var(--space_xs2);
+	}
+	.piece-tagline {
+		margin: var(--space_xs3) 0 0;
+	}
+	.foundation {
+		padding: var(--space_sm) 0;
+		border-top: var(--border_width_1) var(--border_style) var(--border_color_20);
+	}
+	.foundation:last-child {
+		padding-bottom: 0;
+	}
+	.foundation-head {
 		display: flex;
 		flex-wrap: wrap;
 		align-items: baseline;
 		justify-content: space-between;
-		gap: var(--space_md);
-		/* accent the left edge per band so the tower reads as stacked tiers */
-		border-left: var(--border_width_3) var(--border_style) var(--border_color);
-	}
-	.stack-layer .head {
-		flex: 1 1 18rem;
-	}
-	.stack-layer .pieces {
-		flex: 1 1 14rem;
-		justify-content: flex-end;
-	}
-	.band-make .stack-layer {
-		border-left-color: var(--palette_b_50);
-	}
-	.band-fuz .stack-layer {
-		border-left-color: var(--palette_a_50);
-	}
-	.band-foundations .stack-layer {
-		border-left-color: var(--palette_f_50);
+		gap: var(--space_xs) var(--space_md);
+		margin-bottom: var(--space_xs3);
 	}
 </style>

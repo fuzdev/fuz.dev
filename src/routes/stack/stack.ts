@@ -1,27 +1,81 @@
 /**
- * Declarative data for the `/stack` page: the layered view of the Fuz stack,
- * from what you make down to the open foundations it rests on. Layout and band
- * accent colors live in the route; this module is just the data, so the
- * structure stays easy to read and edit in one place. The per-piece `color`
- * tint travels with the data since it encodes each piece's language.
+ * Declarative data for the `/stack` page: the Fuz stack grouped by role, from
+ * the apps you make down to the open foundations it rests on. Layout lives in
+ * the route; this module is just the data, so the structure stays easy to read
+ * and edit in one place. Each piece carries its tagline, implementation
+ * languages, and status, which the route renders as a row with tinted badges.
  *
  * @module
  */
 
-export interface StackPiece {
-	/** Display label, usually a package or technology name. */
+/** Implementation language of a piece, rendered as a tinted badge. */
+export type StackLanguage = 'ts' | 'svelte' | 'css' | 'rust' | 'wasm';
+
+/**
+ * Where a piece stands, one tier per piece. Everything is pre-1.0 and changes
+ * without deprecation, so `ready` is relative to that: usable in production
+ * if you follow the changesets.
+ */
+export type StackStatus = 'ready' | 'early' | 'experimental' | 'planned';
+
+export interface StackBadge {
+	/** Short text shown in the badge. */
 	label: string;
-	/** Parenthetical qualifier rendered after the label, e.g. `garage` or `pre-alpha`. */
-	note?: string;
-	/** External site for pieces Fuz controls; omitted for unlinked or unpublished pieces. */
-	href?: string;
-	/**
-	 * fuz_css `palette_*` class tinting the chip by implementation language:
-	 * `palette_i` (cyan) for TypeScript, `palette_f` (brown) for Rust/WASM,
-	 * `palette_h` (orange) for Svelte/SvelteKit, `palette_d` (purple) for CSS.
-	 * Omitted leaves the chip neutral (web platform, data, mixed, or placeholder).
-	 */
+	/** fuz_css `palette_*` class tinting the badge; omitted leaves it neutral. */
 	color?: string;
+	/** One-line gloss for the legend. */
+	description: string;
+}
+
+/**
+ * Language badges. Tints follow the convention used across the fuz sites:
+ * cyan for TypeScript, orange for Svelte, purple for CSS, brown for Rust,
+ * teal for WASM.
+ */
+export const STACK_LANGUAGES: Readonly<Record<StackLanguage, StackBadge>> = {
+	ts: { label: 'TS', color: 'palette_i', description: 'TypeScript' },
+	svelte: { label: 'Svelte', color: 'palette_h', description: 'Svelte and SvelteKit' },
+	css: { label: 'CSS', color: 'palette_d', description: 'CSS' },
+	rust: { label: 'Rust', color: 'palette_f', description: 'Rust' },
+	wasm: { label: 'WASM', color: 'palette_j', description: 'WASM, compiled from Rust' }
+};
+
+/**
+ * Status badges. Tints avoid the language hues so the two badge kinds read
+ * apart: green for ready, yellow for early, pink for experimental, and neutral
+ * for planned.
+ */
+export const STACK_STATUSES: Readonly<Record<StackStatus, StackBadge>> = {
+	ready: {
+		label: 'ready',
+		color: 'palette_b',
+		description: 'usable in production; pre-1.0, so follow the changesets'
+	},
+	early: {
+		label: 'early',
+		color: 'palette_e',
+		description: 'pre-alpha and under active construction; expect gaps'
+	},
+	experimental: {
+		label: 'experimental',
+		color: 'palette_g',
+		description: 'exploring a direction; may change shape or not survive'
+	},
+	planned: { label: 'planned', description: 'designed but not yet started' }
+};
+
+export interface StackPiece {
+	/** Display name, usually the package or repo name. */
+	name: string;
+	/** One line saying what it is. */
+	tagline: string;
+	/** Implementation languages, in order of prominence; empty for data and docs. */
+	languages: ReadonlyArray<StackLanguage>;
+	status: StackStatus;
+	/** Source repository. */
+	repo: string;
+	/** Docs or project site, when one exists; the name links here, else to `repo`. */
+	site?: string;
 }
 
 export interface StackLayer {
@@ -30,174 +84,259 @@ export interface StackLayer {
 	pieces: ReadonlyArray<StackPiece>;
 }
 
-/** What you build on top of the stack. */
-export const make_layers: ReadonlyArray<StackLayer> = [
+const github = (repo: string): string => `https://github.com/fuzdev/${repo}`;
+
+/** The Fuz stack by role, top down: what you make, then what it's made of. */
+export const stack_layers: ReadonlyArray<StackLayer> = [
 	{
 		name: 'apps and sites',
-		blurb: "Apps and sites built on the stack, Fuz's and yours.",
+		blurb: 'What gets built on the stack, starting with the template and the apps Fuz runs itself.',
 		pieces: [
-			{ label: 'fuz_template', note: 'starter', href: 'https://template.fuz.dev/' },
-			{ label: 'zzz', note: 'garage, experimental', href: 'https://github.com/fuzdev/zzz' },
 			{
-				label: 'fuz_forge',
-				note: 'forge, pre-alpha',
-				href: 'https://github.com/fuzdev/fuz_forge',
-				color: 'palette_f'
+				name: 'fuz_template',
+				tagline: 'starter template for SvelteKit web apps, Rust native tools, or both',
+				languages: ['ts', 'svelte', 'rust'],
+				status: 'ready',
+				site: 'https://template.fuz.dev/',
+				repo: github('fuz_template')
 			},
-			{ label: '', note: 'next' }
-		]
-	}
-];
-
-/** The @fuzdev stack: what Fuz makes. */
-export const fuz_layers: ReadonlyArray<StackLayer> = [
-	{
-		name: 'fullstack spine',
-		blurb:
-			'Choose TypeScript or Rust as your backend, or both: fuz_app on Hono and its Rust twin fuz on Axum share one server pattern for auth, sessions, database, APIs, and tests. Deploy local-first or to the cloud, natively or on Node or Bun. SvelteKit handles the frontend, static or server-rendered, and native and mobile frontends are planned.',
-		pieces: [
-			{ label: 'fuz_app', note: 'pre-alpha', href: 'https://app.fuz.dev/', color: 'palette_i' },
 			{
-				label: 'fuz',
-				note: 'pre-alpha',
-				href: 'https://github.com/fuzdev/fuz',
-				color: 'palette_f'
+				name: 'zzz',
+				tagline: 'software garage for power users and devs',
+				languages: ['ts', 'svelte', 'rust'],
+				status: 'experimental',
+				repo: github('zzz')
+			},
+			{
+				name: 'zervo',
+				tagline: 'native zzz window host built on Servo',
+				languages: ['rust'],
+				status: 'experimental',
+				repo: github('zervo')
+			},
+			{
+				name: 'fuz_forge',
+				tagline: 'personal-scale forge for self-hosting git repos, signed releases, and files',
+				languages: ['rust', 'svelte'],
+				status: 'early',
+				repo: github('fuz_forge')
 			}
 		]
 	},
 	{
-		name: 'CSS and design system',
+		name: 'fullstack',
 		blurb:
-			'Semantic HTML that looks good by default, with themability, utility classes, and full control when needed.',
-		pieces: [{ label: 'fuz_css', href: 'https://css.fuz.dev/', color: 'palette_d' }]
+			'Choose TypeScript or Rust for the backend, or both: fuz_app on Hono and fuz on Axum share one server pattern for auth, sessions, database, APIs, and tests, and one data model: mutable cells that reference immutable facts (content-addressed bytes), changed by actions (schema-validated, serializable calls). SvelteKit handles the frontend, static or server-rendered. Deploy local-first or to the cloud, natively or on Node or Bun.',
+		pieces: [
+			{
+				name: 'fuz_app',
+				tagline: 'fullstack app library: sessions, auth, database, and server-sent events',
+				languages: ['ts'],
+				status: 'early',
+				site: 'https://app.fuz.dev/',
+				repo: github('fuz_app')
+			},
+			{
+				name: 'fuz',
+				tagline: "the fuz CLI, fuzd daemon, and the Rust crates beneath the stack's servers",
+				languages: ['rust'],
+				status: 'early',
+				repo: github('fuz')
+			}
+		]
 	},
 	{
-		name: 'UI',
-		blurb: 'Svelte components, theming, syntax styling, and a markdown dialect for docs.',
+		name: 'frontend',
+		blurb:
+			'Semantic HTML that looks good by default, Svelte components and theming, syntax styling, and a markdown dialect for docs and untrusted content.',
 		pieces: [
-			{ label: 'fuz_ui', href: 'https://ui.fuz.dev/', color: 'palette_h' },
-			{ label: 'fuz_code', href: 'https://code.fuz.dev/', color: 'palette_i' },
-			{ label: 'mdz', href: 'https://mdz.fuz.dev/', color: 'palette_i' }
+			{
+				name: 'fuz_css',
+				tagline: 'semantic-first CSS framework and design system',
+				languages: ['css'],
+				status: 'ready',
+				site: 'https://css.fuz.dev/',
+				repo: github('fuz_css')
+			},
+			{
+				name: 'fuz_ui',
+				tagline: 'Svelte component library and frontend helpers',
+				languages: ['svelte'],
+				status: 'ready',
+				site: 'https://ui.fuz.dev/',
+				repo: github('fuz_ui')
+			},
+			{
+				name: 'fuz_code',
+				tagline: 'syntax styler for TypeScript, Svelte, Markdown, and more',
+				languages: ['ts'],
+				status: 'ready',
+				site: 'https://code.fuz.dev/',
+				repo: github('fuz_code')
+			},
+			{
+				name: 'mdz',
+				tagline:
+					'strict markdown dialect built for streaming, web authoring, docs, and untrusted content',
+				languages: ['ts'],
+				status: 'ready',
+				site: 'https://mdz.fuz.dev/',
+				repo: github('mdz')
+			},
+			{
+				name: 'fuz_blog',
+				tagline: 'blog software from scratch with SvelteKit',
+				languages: ['ts', 'svelte'],
+				status: 'ready',
+				site: 'https://blog.fuz.dev/',
+				repo: github('fuz_blog')
+			}
 		]
 	},
 	{
 		name: 'tooling',
 		blurb:
-			'Run tasks, parse, format in the terminal or editor, analyze, and manage many repos, with an agent skill that teaches the conventions.',
+			'Run tasks, parse and format in the terminal or editor, analyze code, and manage many repos, with an agent skill that teaches the conventions.',
 		pieces: [
-			{ label: 'gro', href: 'https://gro.fuz.dev/', color: 'palette_i' },
-			{ label: 'tsv', href: 'https://tsv.fuz.dev/', color: 'palette_f' },
-			{ label: 'svelte-docinfo', href: 'https://svelte-docinfo.fuz.dev/', color: 'palette_i' },
-			{ label: 'fuz_repos', href: 'https://repos.fuz.dev/' },
 			{
-				label: 'tsv-format',
-				note: 'VS Code',
-				href: 'https://github.com/fuzdev/vscode-extension-tsv-format'
-			},
-			{ label: 'fuz-stack', note: 'agent skill', href: 'https://docs.fuz.dev/skills/fuz-stack' }
-		]
-	},
-	{
-		name: 'utilities',
-		blurb:
-			'Small building blocks: helpers JS lacks, types, async, schemas, and content-addressed hashing.',
-		pieces: [
-			{ label: 'fuz_util', href: 'https://util.fuz.dev/', color: 'palette_i' },
-			{
-				label: 'fuz_schema',
-				note: 'experimental',
-				href: 'https://schema.fuz.dev/',
-				color: 'palette_i'
+				name: 'gro',
+				tagline: 'task runner, codegen, and checks for web projects, becoming its own V8 runtime',
+				languages: ['ts', 'rust'],
+				status: 'ready',
+				site: 'https://gro.fuz.dev/',
+				repo: github('gro')
 			},
 			{
-				label: 'blake3',
-				note: 'WASM hashing',
-				href: 'https://github.com/fuzdev/blake3',
-				color: 'palette_f'
+				name: 'tsv',
+				tagline: 'precise language tools for TypeScript, JS, CSS, and Svelte: parser and formatter',
+				languages: ['rust'],
+				status: 'ready',
+				site: 'https://tsv.fuz.dev/',
+				repo: github('tsv')
+			},
+			{
+				name: 'tsv-format',
+				tagline: 'VS Code extension: format on save, powered by tsv',
+				languages: ['wasm', 'ts'],
+				status: 'ready',
+				repo: github('vscode-extension-tsv-format')
+			},
+			{
+				name: 'svelte-docinfo',
+				tagline: 'static analysis for TypeScript and Svelte 5, feeding docs and tools',
+				languages: ['ts'],
+				status: 'ready',
+				site: 'https://svelte-docinfo.fuz.dev/',
+				repo: github('svelte-docinfo')
+			},
+			{
+				name: 'fuz_repos',
+				tagline: 'multi-repo management: publish cascade, dashboard, and the repos tool',
+				languages: ['ts', 'rust'],
+				status: 'ready',
+				site: 'https://repos.fuz.dev/',
+				repo: github('fuz_repos')
+			},
+			{
+				name: 'fuz-stack',
+				tagline: 'the agent skill that teaches the conventions of the stack',
+				languages: [],
+				status: 'ready',
+				site: 'https://docs.fuz.dev/skills/fuz-stack',
+				repo: github('docs.fuz.dev')
+			},
+			{
+				name: 'corpora',
+				tagline: 'pinned snapshot of real-world code for language-tool gates and benchmarks',
+				languages: [],
+				status: 'ready',
+				repo: github('corpora')
 			}
 		]
 	},
 	{
-		name: 'domain libraries',
-		blurb: 'Components and helpers for a particular kind of app, starting with blogs.',
-		pieces: [{ label: 'fuz_blog', href: 'https://blog.fuz.dev/', color: 'palette_i' }]
-	},
-	{
-		name: 'native',
-		blurb:
-			'System tools in Rust: install signed binaries, run a daemon, and set up and deploy to Linux machines.',
+		name: 'utilities',
+		blurb: 'Small building blocks: helpers JS lacks, types, async, schemas, and hashing.',
 		pieces: [
 			{
-				label: 'fuz',
-				note: 'CLI + daemon, pre-alpha',
-				href: 'https://github.com/fuzdev/fuz',
-				color: 'palette_f'
+				name: 'fuz_util',
+				tagline: 'utility belt for JS: helpers, types, async, and logging',
+				languages: ['ts'],
+				status: 'ready',
+				site: 'https://util.fuz.dev/',
+				repo: github('fuz_util')
 			},
 			{
-				label: 'zap',
-				note: 'deploy + operate, pre-alpha',
-				href: 'https://zap.fuz.dev/',
-				color: 'palette_f'
+				name: 'fuz_schema',
+				tagline:
+					'performance-focused Standard Schema library for JS, with a Rust side that validates JSON text',
+				languages: ['ts', 'rust'],
+				status: 'early',
+				site: 'https://schema.fuz.dev/',
+				repo: github('fuz_schema')
+			},
+			{
+				name: 'blake3',
+				tagline: 'BLAKE3 hashing compiled to WASM',
+				languages: ['rust', 'wasm'],
+				status: 'ready',
+				repo: github('blake3')
+			}
+		]
+	},
+	{
+		name: 'native and data',
+		blurb:
+			"System tools in Rust: set up and deploy to Linux machines, and an embeddable Postgres-compatible engine that makes tests fast today and aims to go places the elephant can't fit.",
+		pieces: [
+			{
+				name: 'zap',
+				tagline:
+					'convergent machine-state management: set up and ship to Linux machines from TypeScript',
+				languages: ['ts', 'rust'],
+				status: 'early',
+				site: 'https://zap.fuz.dev/',
+				repo: github('zap')
+			},
+			{
+				name: 'pglet',
+				tagline: 'small embeddable Postgres-compatible engine, native and WASM',
+				languages: ['rust'],
+				status: 'early',
+				repo: github('pglet')
 			}
 		]
 	}
 ];
 
-/** Open technologies Fuz rests on. */
-export const foundation_layers: ReadonlyArray<StackLayer> = [
+export interface FoundationGroup {
+	name: string;
+	blurb: string;
+	/** Technologies in the group, each rendered as a neutral chip. */
+	items: ReadonlyArray<string>;
+}
+
+/** Open technologies Fuz rests on, grouped compactly; none of these is Fuz's. */
+export const foundation_groups: ReadonlyArray<FoundationGroup> = [
 	{
-		name: 'TypeScript',
+		name: 'languages and runtimes',
 		blurb:
-			'Typed JS across the web side of the stack, running on Node today while gro experiments with becoming its own V8 runtime.',
-		pieces: [
-			{ label: 'TypeScript', color: 'palette_i' },
-			{ label: 'Node', color: 'palette_i' },
-			{ label: 'V8', color: 'palette_i' }
-		]
+			'TypeScript on Node for the web side, Rust for the native tier and for WASM in the browser.',
+		items: ['TypeScript', 'Node', 'V8', 'Rust', 'Cargo', 'WASM']
 	},
 	{
-		name: 'Rust',
-		blurb:
-			'The systems language for the native tier, also compiled to WebAssembly for the browser.',
-		pieces: [
-			{ label: 'Rust', color: 'palette_f' },
-			{ label: 'Cargo', color: 'palette_f' },
-			{ label: 'WebAssembly', color: 'palette_f' }
-		]
+		name: 'frontend',
+		blurb: 'Svelte and SvelteKit over the open web platform.',
+		items: ['Svelte', 'SvelteKit', 'HTML', 'CSS', 'JS', 'Web APIs']
 	},
 	{
-		name: 'Svelte and SvelteKit',
-		blurb: 'Reactive frontend components and the app framework.',
-		pieces: [
-			{ label: 'Svelte', color: 'palette_h' },
-			{ label: 'SvelteKit', color: 'palette_h' }
-		]
+		name: 'data',
+		blurb: 'The filesystem and PostgreSQL, with PGlite for embedded use.',
+		items: ['filesystem', 'PostgreSQL', 'PGlite']
 	},
 	{
-		name: 'the web platform',
-		blurb: 'The browser and open web standards.',
-		pieces: [{ label: 'HTML' }, { label: 'CSS' }, { label: 'JS' }, { label: 'Web APIs' }]
-	},
-	{
-		name: 'data and storage',
-		blurb:
-			"The filesystem and PostgreSQL, with PGlite for embedded use. pglet is Fuz's own embeddable Postgres-compatible engine: today it makes tests fast, and the goal is to go places the elephant can't fit.",
-		pieces: [
-			{ label: 'filesystem' },
-			{ label: 'PostgreSQL' },
-			{ label: 'PGlite' },
-			{
-				label: 'pglet',
-				note: 'tests today',
-				href: 'https://github.com/fuzdev/pglet',
-				color: 'palette_f'
-			}
-		]
-	},
-	{
-		name: 'Linux',
-		blurb:
-			'The primary OS for development and deployment; macOS and Windows support varies by tool.',
-		pieces: [{ label: 'Linux' }]
+		name: 'OS',
+		blurb: 'Developed and deployed on Linux; macOS and Windows support varies by tool.',
+		items: ['Linux']
 	}
 ];
