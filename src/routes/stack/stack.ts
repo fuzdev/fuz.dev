@@ -44,7 +44,7 @@ export const make_layers: ReadonlyArray<StackLayer> = [
 				href: 'https://github.com/fuzdev/fuz_forge',
 				color: 'palette_f'
 			},
-			{ label: 'your app', note: 'next' }
+			{ label: '', note: 'next' }
 		]
 	}
 ];
