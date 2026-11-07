@@ -35,7 +35,7 @@
 				</div>
 			</div>
 		</section>
-		<section class="box row flex-wrap:wrap gap_xl2">
+		<section class="box row_wrap gap_xl2">
 			<PageLinks />
 		</section>
 		<section class="panel p_lg shadow_inset_xs">

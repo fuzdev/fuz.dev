@@ -25,7 +25,7 @@
 			<h1 class="mt_xl2">fuz.dev</h1>
 		</header>
 	</section>
-	<section class="box row flex-wrap:wrap gap_xl2">
+	<section class="box row_wrap gap_xl2">
 		<PageLinks />
 	</section>
 	<!-- <section class="box mb_lg">

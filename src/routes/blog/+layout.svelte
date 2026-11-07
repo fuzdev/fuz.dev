@@ -24,7 +24,7 @@
 	<div class="box width:100%">
 		{@render children()}
 	</div>
-	<section class="box row flex-wrap:wrap gap_xl2 mt_xl5">
+	<section class="box row_wrap gap_xl2 mt_xl5">
 		<PageLinks />
 	</section>
 	<nav class="mt_xl3" style:--font_size="var(--font_size_lg)">

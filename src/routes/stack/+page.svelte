@@ -117,7 +117,7 @@
 					{#each foundation_groups as group (group.name)}
 						<li class="foundation">
 							<h3 class="mt_0 mb_xs">{group.name}</h3>
-							<div class="row gap_xs2 flex-wrap:wrap mb_xs2">
+							<div class="row_wrap gap_xs2 mb_xs2">
 								{#each group.items as item (item)}
 									<span class="chip sized_sm">{item}</span>
 								{/each}
@@ -129,7 +129,7 @@
 			</div>
 		</section>
 
-		<section class="box row flex-wrap:wrap gap_xl2">
+		<section class="box row_wrap gap_xl2">
 			<PageLinks />
 		</section>
 		<section>

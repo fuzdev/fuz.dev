@@ -68,7 +68,7 @@
 				is the <a href="https://contributor-covenant.org/">Contributor Covenant</a>.
 			</p>
 		</section>
-		<section class="box row flex-wrap:wrap gap_xl2">
+		<section class="box row_wrap gap_xl2">
 			<PageLinks />
 		</section>
 		<section>
