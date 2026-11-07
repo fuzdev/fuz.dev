@@ -22,8 +22,8 @@
 					<p>
 						Fuz is a zippy stack for human agency. What that means is for you to decide! Today Fuz
 						has a collection of libraries for making modern websites with TypeScript, CSS, Svelte,
-						and SvelteKit, and soon they'll be joined by native tools written in Rust. It's free
-						software all the way down.
+						and SvelteKit, joined by native tools written in Rust - see
+						<a href={resolve('/stack')}>the stack</a>. It's free software all the way down.
 					</p>
 					<p>
 						Fuz has been quietly built in public full-time since 2019. The project has one

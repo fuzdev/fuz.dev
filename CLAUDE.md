@@ -56,11 +56,14 @@ src/
     ├── +layout.ts            # prerender: true, ssr: true
     ├── +page.svelte          # home page
     ├── style.css             # custom global styles
-    ├── PageLinks.svelte      # about/blog/contributing cards, minus the current page
+    ├── PageLinks.svelte      # about/blog/stack/contributing cards, minus the current page
     ├── blogs.ts              # fuz_blog registry, input to `src/lib/blog.gen.ts`
     ├── about/+page.svelte
     ├── blog/                 # fuz_blog posts, index, and generated feed
-    └── contributing/+page.svelte
+    ├── contributing/+page.svelte
+    └── stack/
+        ├── +page.svelte      # the layered view of the stack, from apps down to foundations
+        └── stack.ts          # its data: layers and pieces with links and language tints
 ```
 
 ### SvelteKit configuration

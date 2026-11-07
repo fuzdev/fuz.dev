@@ -8,6 +8,7 @@
 	const about_path = resolve('/about');
 	const blog_path = resolve('/blog');
 	const contributing_path = resolve('/contributing');
+	const stack_path = resolve('/stack');
 </script>
 
 <!-- each card hides on its own page (and the blog card on its posts too) -->
@@ -16,6 +17,9 @@
 {/if}
 {#if pathname !== blog_path && !pathname.startsWith(blog_path + '/')}
 	<Card href={blog_path} icon="🪧" align="end">blog</Card>
+{/if}
+{#if pathname !== stack_path}
+	<Card href={stack_path} icon="🕸" align="end">stack</Card>
 {/if}
 {#if pathname !== contributing_path}
 	<Card href={contributing_path} icon="🌱" align="end">contributing</Card>
