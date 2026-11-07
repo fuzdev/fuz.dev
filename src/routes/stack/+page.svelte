@@ -113,13 +113,11 @@
 				<ul class="unstyled">
 					{#each foundation_groups as group (group.name)}
 						<li class="foundation">
-							<div class="foundation-head">
-								<h3 class="mt_0 mb_0">{group.name}</h3>
-								<div class="row gap_xs2 flex-wrap:wrap">
-									{#each group.items as item (item)}
-										<span class="chip sized_sm">{item}</span>
-									{/each}
-								</div>
+							<h3 class="mt_0 mb_xs">{group.name}</h3>
+							<div class="row gap_xs2 flex-wrap:wrap mb_xs2">
+								{#each group.items as item (item)}
+									<span class="chip sized_sm">{item}</span>
+								{/each}
 							</div>
 							<p class="text_70 mb_0">{group.blurb}</p>
 						</li>
@@ -186,13 +184,5 @@
 	}
 	.foundation:last-child {
 		padding-bottom: 0;
-	}
-	.foundation-head {
-		display: flex;
-		flex-wrap: wrap;
-		align-items: baseline;
-		justify-content: space-between;
-		gap: var(--space_xs) var(--space_md);
-		margin-bottom: var(--space_xs3);
 	}
 </style>

@@ -33,7 +33,7 @@ export interface StackBadge {
  * teal for WASM.
  */
 export const STACK_LANGUAGES: Readonly<Record<StackLanguage, StackBadge>> = {
-	ts: { label: 'TS', color: 'palette_i', description: 'TypeScript' },
+	ts: { label: 'TypeScript', color: 'palette_i', description: 'TypeScript' },
 	svelte: { label: 'Svelte', color: 'palette_h', description: 'Svelte and SvelteKit' },
 	css: { label: 'CSS', color: 'palette_d', description: 'CSS' },
 	rust: { label: 'Rust', color: 'palette_f', description: 'Rust' },
@@ -109,7 +109,7 @@ export const stack_layers: ReadonlyArray<StackLayer> = [
 			},
 			{
 				name: 'zervo',
-				tagline: 'native zzz window host built on Servo',
+				tagline: 'native Zzz window host using Servo',
 				languages: ['rust'],
 				status: 'experimental',
 				repo: github('zervo')
@@ -126,11 +126,12 @@ export const stack_layers: ReadonlyArray<StackLayer> = [
 	{
 		name: 'fullstack',
 		blurb:
-			'Choose TypeScript or Rust for the backend, or both: fuz_app on Hono and fuz on Axum share one server pattern for auth, sessions, database, APIs, and tests, and one data model: mutable cells that reference immutable facts (content-addressed bytes), changed by actions (schema-validated, serializable calls). SvelteKit handles the frontend, static or server-rendered. Deploy local-first or to the cloud, natively or on Node or Bun.',
+			'Choose TypeScript or Rust for the backend, or both: fuz_app on Hono and fuz on Axum share a server pattern for auth, sessions, database, APIs, and tests, and a data model: mutable cells that reference immutable facts (content-addressed bytes), changed by actions (schema-validated, serializable calls). SvelteKit handles the frontend, static or server-rendered. Deploy local-first or to the cloud, natively or on Node or Bun.',
 		pieces: [
 			{
 				name: 'fuz_app',
-				tagline: 'fullstack app library: sessions, auth, database, and server-sent events',
+				tagline:
+					'fullstack app library: auth, sessions, accounts, database, and middleware for SvelteKit and Hono',
 				languages: ['ts'],
 				status: 'early',
 				site: 'https://app.fuz.dev/',
@@ -203,7 +204,6 @@ export const stack_layers: ReadonlyArray<StackLayer> = [
 				tagline: 'task runner, codegen, and checks for web projects, becoming its own V8 runtime',
 				languages: ['ts', 'rust'],
 				status: 'ready',
-				site: 'https://gro.fuz.dev/',
 				repo: github('gro')
 			},
 			{
