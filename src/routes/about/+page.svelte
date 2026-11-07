@@ -16,14 +16,14 @@
 </script>
 
 <main class="width_atmost_md pb_xl9">
+	<nav class="box mt_xl3" style:--font_size="var(--font_size_lg)">
+		<Breadcrumb />
+	</nav>
 	<section class="box">
 		<header class="box pt_xl">
 			<Svg data={logo_fuz} size="var(--icon_size_xl)" />
 			<h1 class="mt_xl2">fuz.dev</h1>
 		</header>
-		<div style:--font_size="var(--font_size_xl)">
-			<Breadcrumb />
-		</div>
 	</section>
 	<section class="box row flex-wrap:wrap gap_xl2">
 		<PageLinks />

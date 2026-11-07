@@ -60,6 +60,9 @@
 
 <main class="box width:100%">
 	<div class="box width_atmost_md mb_xl9">
+		<nav class="mt_xl3" style:--font_size="var(--font_size_lg)">
+			<Breadcrumb />
+		</nav>
 		<section class="box">
 			<header class="box pt_xl">
 				<Svg data={logo_fuz} size="var(--icon_size_xl)" />
