@@ -1,7 +1,8 @@
 <script lang="ts">
 	import BlogPostList from '@fuzdev/fuz_blog/BlogPostList.svelte';
+	import Svg from '@fuzdev/fuz_ui/Svg.svelte';
+	import { logo_fuz } from '@fuzdev/fuz_ui/logos.ts';
 
-	import PageLinks from '../PageLinks.svelte';
 	import { feed } from './feed.ts';
 </script>
 
@@ -9,7 +10,7 @@
 	<title>{feed.title}</title>
 </svelte:head>
 
+<header class="box pt_xl">
+	<Svg data={logo_fuz} size="var(--icon_size_xl)" />
+</header>
 <BlogPostList {feed} />
-<section class="box row flex-wrap:wrap gap_xl2 mb_xl7">
-	<PageLinks />
-</section>

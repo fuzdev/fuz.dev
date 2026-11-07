@@ -25,15 +25,15 @@
 			<Breadcrumb />
 		</div>
 	</section>
+	<section class="box row flex-wrap:wrap gap_xl2">
+		<PageLinks />
+	</section>
 	<!-- <section class="box mb_lg">
 		<div class="panel p_lg width_atmost_md">
 			<LibrarySummary {library} />
 		</div>
 	</section> -->
 	<EcosystemLinksPanel />
-	<section class="box row flex-wrap:wrap gap_xl2">
-		<PageLinks />
-	</section>
 	<section class="box">
 		<DocsFooter repo_url={site.repo_url} root_url={FUZ_DEV_URL} />
 	</section>

@@ -2,7 +2,7 @@
 
 [<img src="static/logo.svg" alt="a friendly brown spider" align="right" width="192" height="192">](https://www.fuz.dev/)
 
-> homepage for Fuz, free software for human agency 🦋 [fuz.dev](https://www.fuz.dev/)
+> homepage for Fuz, free software for human agency 🕸 [fuz.dev](https://www.fuz.dev/)
 
 Fuz is a zippy stack for human agency. What that means is for you to decide!
 Today Fuz has a collection of libraries for making modern websites
