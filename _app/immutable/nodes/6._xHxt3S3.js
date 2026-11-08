@@ -43,9 +43,11 @@ import{C as e,D as t,F as n,G as r,H as i,I as a,J as o,L as s,N as c,R as l,S a
 			public-domain-equivalent 0BSD. As the stack has matured, I'm starting to work on apps and
 			websites for end-users, some in collaboration with other people. More about those later.</p> <h2>The AI elephant in the room</h2> <p>AI is reshaping the software world, and this project is driven by a person who uses AI with
 			concern for its widespread harms to culture, livelihoods, and the environment. I built Fuz for
-			6 years by hand, and then in 2025 I started using agentic development tools. I'm choosing to
-			use AI in service of my values, which include self-determination, personal and societal and
-			environmental health, and making high quality information and tools freely available.</p> <p>For people who want software to improve our lives, AI unlocks new opportunities. I agree with
+			6 years by hand, and then in 2025 I started using agentic development tools. Looking at the
+			list of projects above, the scope is beyond what I imagined in 2019, but to me in 2026 it
+			seems not absurdly over-reaching. I'm choosing to use AI in service of my values, which
+			include self-determination, personal and societal and environmental health, and making high
+			quality information and tools freely available.</p> <p>For people who want software to improve our lives, AI unlocks new opportunities. I agree with
 			those who say we are experiencing the transition to software abundance. Closed models can
 			produce open software, and using AI doesn't imply central corporate control: open models
 			running on private hardware can produce software that humans could not feasibly build due to
