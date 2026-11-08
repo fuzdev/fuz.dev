@@ -134,10 +134,11 @@
 			AI is reshaping the software world, and this project is driven by a person who uses AI with
 			concern for its widespread harms to culture, livelihoods, and the environment. I built Fuz for
 			6 years by hand, and then in 2025 I started using agentic development tools, and I have been a
-			heavy Claude Code user since. Looking at the list of projects above, the scope is beyond what
-			I imagined in 2019, but to me in 2026 it seems not absurdly over-reaching. I'm choosing to use
-			AI in service of my values, which include self-determination, personal and societal and
-			environmental health, and making high quality information and tools freely available.
+			heavy Claude Code user since. Looking at the list of projects above, the scope is well beyond
+			what I imagined in 2019, but to me in 2026 I don't see it as absurdly over-reaching. Design is
+			the hard and fun part to me, and AI is a big lever. I'm choosing to use AI in service of my
+			values, which include self-determination, personal and societal and environmental health, and
+			making high quality information and tools freely available.
 		</p>
 		<p>
 			For people who want software to improve our lives, AI unlocks new opportunities. I agree with
