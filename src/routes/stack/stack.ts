@@ -5,6 +5,10 @@
  * and edit in one place. Each piece carries its tagline, implementation
  * languages, and status, which the route renders as a row with tinted badges.
  *
+ * The fuzdev org profile on GitHub is generated from this same data (the
+ * `.github` repo's `profile/README.gen.md.ts`), so regenerate it after editing
+ * here.
+ *
  * @module
  */
 
@@ -126,7 +130,7 @@ export const stack_layers: ReadonlyArray<StackLayer> = [
 	{
 		name: 'fullstack',
 		blurb:
-			'Choose TypeScript or Rust for the backend, or both: fuz_app on Hono and fuz on Axum share a server pattern for auth, sessions, database, APIs, and tests, and a data model: mutable cells that reference immutable facts (content-addressed bytes), changed by actions (schema-validated, serializable calls). SvelteKit handles the frontend, static or server-rendered. Deploy local-first or to the cloud, natively or on Node or Bun.',
+			'A backend in TypeScript or Rust or both, sharing one server pattern for auth, sessions, database, and APIs and one data model of cells, facts, and actions, with SvelteKit in front and deploys local-first or to the cloud.',
 		pieces: [
 			{
 				name: 'fuz_app',
@@ -271,7 +275,7 @@ export const stack_layers: ReadonlyArray<StackLayer> = [
 				tagline:
 					'performance-focused Standard Schema library for JS, with a Rust side that validates JSON text',
 				languages: ['ts', 'rust'],
-				status: 'early',
+				status: 'ready',
 				site: 'https://schema.fuz.dev/',
 				repo: github('fuz_schema')
 			},
@@ -311,32 +315,30 @@ export const stack_layers: ReadonlyArray<StackLayer> = [
 
 export interface FoundationGroup {
 	name: string;
-	blurb: string;
 	/** Technologies in the group, each rendered as a neutral chip. */
 	items: ReadonlyArray<string>;
+	/** Only for what the chips don't say on their own: roles, caveats. */
+	blurb?: string;
 }
 
 /** Open technologies Fuz rests on, grouped compactly; none of these is Fuz's. */
 export const foundation_groups: ReadonlyArray<FoundationGroup> = [
 	{
 		name: 'languages and runtimes',
-		blurb:
-			'TypeScript on Node for the web side, Rust for the native tier and for WASM in the browser.',
-		items: ['TypeScript', 'Node', 'V8', 'Rust', 'Cargo', 'WASM']
+		items: ['TypeScript', 'Node', 'V8', 'Rust', 'Cargo', 'WASM'],
+		blurb: 'TypeScript on Node for the web side, Rust for native tools and WASM in the browser.'
 	},
 	{
 		name: 'frontend',
-		blurb: 'Svelte and SvelteKit over the open web platform.',
 		items: ['Svelte', 'SvelteKit', 'HTML', 'CSS', 'JS', 'Web APIs']
 	},
 	{
 		name: 'data',
-		blurb: 'The filesystem and PostgreSQL, with PGlite for embedded use.',
 		items: ['filesystem', 'PostgreSQL', 'PGlite']
 	},
 	{
 		name: 'OS',
-		blurb: 'Developed and deployed on Linux; macOS and Windows support varies by tool.',
-		items: ['Linux']
+		items: ['Linux'],
+		blurb: 'Developed and deployed on Linux; macOS and Windows support varies by tool.'
 	}
 ];

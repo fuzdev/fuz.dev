@@ -5,6 +5,7 @@
 	import Breadcrumb from '@fuzdev/fuz_ui/Breadcrumb.svelte';
 	import Svg from '@fuzdev/fuz_ui/Svg.svelte';
 	import { logo_fuz } from '@fuzdev/fuz_ui/logos.ts';
+	import { slugify } from '@fuzdev/fuz_util/path.ts';
 	import { resolve } from '$app/paths';
 
 	import PageLinks from '../PageLinks.svelte';
@@ -14,6 +15,7 @@
 		STACK_LANGUAGES,
 		STACK_STATUSES,
 		type StackBadge,
+		type StackLanguage,
 		type StackPiece,
 		type StackStatus
 	} from './stack.ts';
@@ -24,6 +26,7 @@
 	const used_statuses: Array<StackStatus> = (
 		Object.keys(STACK_STATUSES) as Array<StackStatus>
 	).filter((status) => stack_layers.some((layer) => layer.pieces.some((p) => p.status === status)));
+	const languages = Object.keys(STACK_LANGUAGES) as Array<StackLanguage>;
 </script>
 
 <svelte:head>
@@ -71,9 +74,9 @@
 			<div class="mb_lg p_xs2 shadow_md border_radius_sm">
 				<div class="width_atmost_md panel p_lg shadow_inset_xs shade_00">
 					<p>
-						Fuz is a free software stack designed for human agency: tools and libraries in
-						TypeScript, CSS, Svelte, and Rust, building on open web and native foundations. It bakes
-						in some opinions but is designed for modularity, so you can use a single piece or
+						Fuz is a free software stack designed for human agency: it provides tools and libraries
+						in TypeScript, CSS, Svelte, and Rust, building on open web and native foundations. It
+						bakes in some opinions but is designed for modularity, so you can use a single piece or
 						whichever parts fit your project. All of the
 						<a href="https://github.com/fuzdev">code on GitHub</a> is licensed with the
 						public-domain-equivalent 0BSD. For the story behind it, read the
@@ -93,6 +96,15 @@
 							</li>
 						{/each}
 					</ul>
+					<p>and what it's made of:</p>
+					<ul class="legend unstyled">
+						{#each languages as language (language)}
+							<li>
+								{@render badge(STACK_LANGUAGES[language])}
+								<span class="text_80">{STACK_LANGUAGES[language].description}</span>
+							</li>
+						{/each}
+					</ul>
 				</div>
 			</div>
 		</section>
@@ -100,7 +112,7 @@
 		<section class="width:100%">
 			{#each stack_layers as layer (layer.name)}
 				<div class="panel p_md mb_xl">
-					<h2 class="mb_lg">{layer.name}</h2>
+					<h2 class="mb_lg" id={slugify(layer.name)}>{layer.name}</h2>
 					<p class="text_80">{layer.blurb}</p>
 					<ul class="pieces unstyled">
 						{#each layer.pieces as piece (piece.name)}
@@ -117,12 +129,14 @@
 					{#each foundation_groups as group (group.name)}
 						<li class="foundation">
 							<h3 class="mt_0 mb_xs">{group.name}</h3>
-							<div class="row_wrap gap_xs2 mb_xs2">
+							<div class="row_wrap gap_xs2">
 								{#each group.items as item (item)}
 									<span class="chip sized_sm">{item}</span>
 								{/each}
 							</div>
-							<p class="text_70 mb_0">{group.blurb}</p>
+							{#if group.blurb}
+								<p class="text_70 mt_xs2 mb_0">{group.blurb}</p>
+							{/if}
 						</li>
 					{/each}
 				</ul>
