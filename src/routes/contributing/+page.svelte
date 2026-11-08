@@ -45,8 +45,7 @@
 			<p>The Fuz community seeks quality and clarity:</p>
 			<ul>
 				<li>
-					LLMs/AI tool usage is acceptable - please disclose when appropriate (this is always a
-					judgment call; err towards transparency) - see the
+					LLMs/AI tool usage is acceptable, see the
 					<a href="https://docs.fuz.dev/skills/fuz-stack">fuz-stack skill</a>
 				</li>
 				<li>
