@@ -31,7 +31,7 @@
 			<p>Contributions to Fuz take many forms in public:</p>
 			<ul>
 				<li>
-					discussions on GitHub - see each repo and the
+					discussions on GitHub - especially about design choices, see each repo and the
 					<a href="https://github.com/orgs/fuzdev/discussions">fuzdev org discussions</a>
 				</li>
 				<li>issues for bug reports and triage - when in doubt, prefer discussions over issues</li>
