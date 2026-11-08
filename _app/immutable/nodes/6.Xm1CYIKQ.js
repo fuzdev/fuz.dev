@@ -59,9 +59,11 @@ import{C as e,D as t,F as n,G as r,H as i,I as a,J as o,L as s,N as c,R as l,S a
 			the best software I could imagine. The libraries are available for early adopters, but only a
 			few are ready for production, and I'll share apps made with Fuz when they're ready. Fuz will
 			not operate services beyond its community websites, due to costs and complicated incentives,
-			simplifying its path to sustainability.</p> <p>I'm seeking design collaborators to help shape the direction Fuz goes. I'm committed to
-			working on Fuz full-time through 2027, and in 2028 I will reassess based on <a href="https://www.ryanatkn.com/funding">funding</a> and user feedback. To contribute, no
-			expertise is needed, only a perspective you want to share. When time permits, I hope to build
-			a community site with the stack to supplement GitHub discussions. In the meantime you're
-			invited to join me on GitHub to follow along or help out.</p> <ul><li><a href="https://www.fuz.dev/contributing">fuz.dev/contributing</a> - discussions/issues/PRs
+			simplifying its path to sustainability.</p> <p>I'm seeking design collaborators to help shape the direction Fuz goes. I think the project
+			succeeds if a community forms and deliberates through important design choices,
+			collaboratively in public. I'm committed to working on Fuz full-time through 2027, and in 2028
+			I will reassess based on <a href="https://www.ryanatkn.com/funding">funding</a> and user
+			feedback. To contribute, no expertise is needed, only a perspective you want to share. When
+			time permits, I hope to build a community site with the stack to supplement GitHub
+			discussions. In the meantime you're invited to join me on GitHub to follow along or help out.</p> <ul><li><a href="https://www.fuz.dev/contributing">fuz.dev/contributing</a> - discussions/issues/PRs
 				are all open</li> <li><a href="https://www.fuz.dev/stack">fuz.dev/stack</a> - technical overview</li> <li>GitHub as <a rel="me" href="https://github.com/fuzdev">@fuzdev</a></li> <li>Bluesky as <a rel="me" href="https://bsky.app/profile/fuz.dev">@fuz.dev</a></li> <li>my personal blog's <a href="https://www.ryanatkn.com/blog/1-im-building-free-software-for-human-agency">intro post</a></li></ul></section>`);function I(e,t){r(t,!0),N(e,{get post(){return P},children:(e,t)=>{var n=F(),r=S(a(n),2),i=S(a(r),3);y(),o(r),y(28),o(n),c(e=>v(i,`href`,e),[()=>C(`blog/feed.xml`)]),u(e,n)},$$slots:{default:!0}}),d()}export{I as component};
