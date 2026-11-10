@@ -273,7 +273,7 @@ export const stack_layers: ReadonlyArray<StackLayer> = [
 			{
 				name: 'fuz_schema',
 				tagline:
-					'performance-focused Standard Schema library for JS, with a Rust side that validates JSON text',
+					'performance-focused schema library for JS, with a Rust side that validates JSON text',
 				languages: ['ts', 'rust'],
 				status: 'ready',
 				site: 'https://schema.fuz.dev/',
