@@ -207,7 +207,7 @@ export const stack_layers: ReadonlyArray<StackLayer> = [
 				name: 'gro',
 				tagline: 'task runner, codegen, and checks for web projects, becoming its own V8 runtime',
 				languages: ['ts', 'rust'],
-				status: 'ready',
+				status: 'experimental',
 				repo: github('gro')
 			},
 			{

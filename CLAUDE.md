@@ -26,6 +26,7 @@ gro sync      # regenerate files and run svelte-kit sync
 - Vite — build tool
 - `@fuzdev/fuz_css` — semantic-first CSS framework and design system
 - `@fuzdev/fuz_ui` — UI components and theming
+- `@fuzdev/fuz_blog` — the blog (posts, feed generation, post tasks)
 - `@fuzdev/fuz_util` — utility functions
 - `@fuzdev/fuz_code` — syntax highlighting (its Svelte preprocessor and theme)
 - `@fuzdev/mdz` — minimal markdown dialect (its Svelte preprocessor)
