@@ -21,9 +21,10 @@
 	<nav class="mt_xl3" style:--font_size="var(--font_size_lg)">
 		<Breadcrumb />
 	</nav>
-	<div class="box width:100%">
+	<section class="box width:100%">
 		{@render children()}
-	</div>
+	</section>
+	<hr />
 	<section class="box row_wrap gap_xl2 mt_xl5">
 		<PageLinks />
 	</section>
