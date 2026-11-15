@@ -27,8 +27,7 @@
 			extend, and swap out unburdened, with polished UX and technical excellence. Fuz has no
 			investors and it will remain noncommercial, so it can focus on serving the people who use it.
 			I lucked into an opportunity to pursue self-funded work for a substantial period of time, and
-			after 7 years I'm announcing the results and continuation of that effort. By the end of 2027,
-			Fuz will either become a hobby or my livelihood.
+			after 7 years I'm announcing the results and continuation of that effort.
 		</p>
 		<p>
 			For more about my background, see my personal blog's
@@ -162,11 +161,10 @@
 		<p>
 			I'm seeking design collaborators to help shape the direction Fuz goes. I think the project
 			succeeds if a community forms and deliberates through important design choices,
-			collaboratively in public. I'm committed to working on Fuz full-time through 2027, and in 2028
-			I will reassess based on <a href="https://www.ryanatkn.com/funding">funding</a> and user
-			feedback. To contribute, no expertise is needed, only a perspective you want to share. When
-			time permits, I hope to build a community site with the stack to supplement GitHub
-			discussions. In the meantime you're invited to join me on GitHub to follow along or help out.
+			collaboratively in public. To contribute, no expertise is needed, only a perspective you want
+			to share. When time permits, I hope to build a community site with the stack to supplement
+			GitHub discussions. In the meantime you're invited to join me on GitHub to follow along or
+			help out.
 		</p>
 		<ul>
 			<li>
