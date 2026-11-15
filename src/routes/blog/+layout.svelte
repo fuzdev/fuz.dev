@@ -24,7 +24,6 @@
 	<section class="box width:100%">
 		{@render children()}
 	</section>
-	<hr />
 	<section class="box row_wrap gap_xl2 mt_xl5">
 		<PageLinks />
 	</section>
