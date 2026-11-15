@@ -123,7 +123,7 @@
 			{/each}
 
 			<div class="panel p_md">
-				<h2 class="mb_lg">what it rests on</h2>
+				<h2 class="mb_lg">foundations</h2>
 				<p class="text_80">Open technologies Fuz builds on, none of them Fuz's own.</p>
 				<ul class="unstyled">
 					{#each foundation_groups as group (group.name)}
