@@ -155,8 +155,12 @@
 			directly with the people who use it, without shareholders as the supreme customer, to produce
 			the best software I could imagine. The libraries are available for early adopters, but only a
 			few are ready for production, and I'll share apps made with Fuz when they're ready. Fuz will
-			not operate services beyond its community websites, due to costs and complicated incentives,
-			simplifying its path to sustainability.
+			not operate services beyond possible community websites (if I choose that direction, TBD), due
+			to costs and complicated incentives, simplifying its path to sustainability. I want Fuz to be
+			funded transparently with public donations, but it has no legal entity and may never, so for
+			now I accept personal <a href="https://www.ryanatkn.com/funding">donations</a> via GitHub
+			Sponsors and Patreon. Regardless of funding, I intend to maintain Fuz for the foreseeable
+			future as I build on it.
 		</p>
 		<p>
 			I'm seeking design collaborators to help shape the direction Fuz goes. I think the project
