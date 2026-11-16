@@ -39,7 +39,7 @@
 				<li>Bluesky as <a rel="me" href="https://bsky.app/profile/fuz.dev">@fuz.dev</a></li>
 			</ul>
 			<p>
-				LLMs/AI tool usage is acceptable, see the
+				AI usage is acceptable, see the
 				<a href="https://docs.fuz.dev/skills/fuz-stack">fuz-stack skill</a>, please disclose when
 				you feel doing so is appropriate, and be mindful of costing people's time and attention.
 			</p>
