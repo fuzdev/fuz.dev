@@ -38,22 +38,11 @@
 				<li>PRs are restricted to collaborators - please email me if interested</li>
 				<li>Bluesky as <a rel="me" href="https://bsky.app/profile/fuz.dev">@fuz.dev</a></li>
 			</ul>
-			<p>The Fuz community seeks quality and clarity:</p>
-			<ul>
-				<li>
-					LLMs/AI tool usage is acceptable, see the
-					<a href="https://docs.fuz.dev/skills/fuz-stack">fuz-stack skill</a>, please disclose when
-					you feel doing so is appropriate
-				</li>
-				<li>
-					be aware that posting to community spaces costs people's time and attention, and slop is
-					frowned upon
-				</li>
-				<li>
-					participants in Fuz community spaces are encouraged to stay on topic and bring their
-					genuine human perspectives
-				</li>
-			</ul>
+			<p>
+				LLMs/AI tool usage is acceptable, see the
+				<a href="https://docs.fuz.dev/skills/fuz-stack">fuz-stack skill</a>, please disclose when
+				you feel doing so is appropriate, and be mindful of costing people's time and attention.
+			</p>
 			<p>
 				To report a security vulnerability, see
 				<a href="https://github.com/fuzdev/.github/blob/main/SECURITY.md">SECURITY.md</a>.
