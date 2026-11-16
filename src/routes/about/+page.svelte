@@ -34,17 +34,17 @@
 		<div class="panel pt_md pl_md pr_xl pb_xl shadow_bottom_sm">
 			<div class="pt_xs pl_xs pr_md pb_md shadow_xs border_radius_md">
 				<div class="panel p_xl shadow_inset_top_xs shade_00">
+					<p>
+						Fuz is a free software stack for human agency - see
+						<a href={resolve('/stack')}>the stack.</a>
+					</p>
 					<ul>
-						<li>
-							Fuz is a free software stack for human agency - see
-							<a href={resolve('/stack')}>the stack</a>
-						</li>
 						<li>
 							built full-time in public since 2019 by
 							<a href="https://www.ryanatkn.com/">Ryan Atkinson</a>
 						</li>
 						<li>
-							noncommercial
+							noncommercial:
 							<ul>
 								<li>no investors or shareholders</li>
 								<li>self-funded so far</li>
@@ -56,14 +56,14 @@
 							<a href="https://spdx.org/licenses/0BSD.html">0BSD</a>
 						</li>
 						<li>
-							pre-stable
+							pre-stable:
 							<ul>
 								<li>breaking changes without deprecation periods</li>
 								<li>see each package's changelog</li>
 							</ul>
 						</li>
 						<li>
-							this site
+							this site:
 							<ul>
 								<li>static, built with Fuz</li>
 								<li>no analytics or tracking</li>
