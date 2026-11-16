@@ -7,7 +7,7 @@
   <subtitle>writing about Fuz, a free software stack for human agency</subtitle>
   <link href="https://www.fuz.dev/blog" />
   <link href="https://www.fuz.dev/blog/feed.xml" rel="self" type="application/atom+xml" />
-  <updated>2026-11-06T21:15:06.000Z</updated>
+  <updated>2026-11-16T22:22:55.000Z</updated>
   <icon>https://www.fuz.dev/favicon.png</icon>
   <author>
     <name>Ryan Atkinson</name>
@@ -20,7 +20,7 @@
     <title>Fuz is a free software stack for human agency</title>
     <link rel="alternate" href="https://www.fuz.dev/blog/1-fuz-is-a-free-software-stack-for-human-agency" />
     <published>2026-11-06T21:15:06.000Z</published>
-    <updated>2026-11-06T21:15:06.000Z</updated>
+    <updated>2026-11-16T22:22:55.000Z</updated>
     <summary>introducing fuz.dev</summary>
     <category term="announcement" />
   </entry>

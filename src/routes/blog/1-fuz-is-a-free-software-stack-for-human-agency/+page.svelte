@@ -4,7 +4,7 @@
 	export const post = {
 		title: 'Fuz is a free software stack for human agency',
 		date_published: '2026-11-06T21:15:06.000Z',
-		date_modified: '2026-11-06T21:15:06.000Z',
+		date_modified: '2026-11-16T22:22:55.000Z',
 		summary: 'introducing fuz.dev',
 		tags: ['announcement']
 	} satisfies BlogPostMetadata;
@@ -172,8 +172,8 @@
 		</p>
 		<ul>
 			<li>
-				<a href="https://www.fuz.dev/contributing">fuz.dev/contributing</a> - discussions/issues/PRs
-				are all open
+				<a href="https://www.fuz.dev/contributing">fuz.dev/contributing</a> - discussions and issues
+				are open, PRs are restricted to collaborators (email me if interested)
 			</li>
 			<li><a href="https://www.fuz.dev/stack">fuz.dev/stack</a> - technical overview</li>
 			<li>GitHub as <a rel="me" href="https://github.com/fuzdev">@fuzdev</a></li>

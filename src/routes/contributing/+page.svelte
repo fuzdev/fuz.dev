@@ -25,8 +25,8 @@
 		</section>
 		<section class="panel p_lg shadow_inset_xs">
 			<p>
-				Fuz is a noncommercial project that stewards a collection of open source free software
-				projects. Everyone is welcome to participate.
+				Fuz is a noncommercial project that stewards a collection of free software projects.
+				Everyone is welcome to participate.
 			</p>
 			<p>Contributions to Fuz take many forms in public:</p>
 			<ul>
@@ -35,21 +35,18 @@
 					<a href="https://github.com/orgs/fuzdev/discussions">fuzdev org discussions</a>
 				</li>
 				<li>issues for bug reports and triage - when in doubt, prefer discussions over issues</li>
-				<li>
-					PRs are accepted but are de-emphasized as a form of contribution - the Fuz maintainer
-					generally values discussions more than code changes (because figuring out what to build is
-					harder than implementing, and PRs cost significant time and attention)
-				</li>
+				<li>PRs are restricted to collaborators - please email me if interested</li>
 				<li>Bluesky as <a rel="me" href="https://bsky.app/profile/fuz.dev">@fuz.dev</a></li>
 			</ul>
 			<p>The Fuz community seeks quality and clarity:</p>
 			<ul>
 				<li>
 					LLMs/AI tool usage is acceptable, see the
-					<a href="https://docs.fuz.dev/skills/fuz-stack">fuz-stack skill</a>
+					<a href="https://docs.fuz.dev/skills/fuz-stack">fuz-stack skill</a>, please disclose when
+					you feel doing so is appropriate
 				</li>
 				<li>
-					be aware that submitting posts and PRs costs people's time and attention, and slop is
+					be aware that posting to community spaces costs people's time and attention, and slop is
 					frowned upon
 				</li>
 				<li>

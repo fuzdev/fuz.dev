@@ -20,7 +20,7 @@ export const feed: BlogFeed = {
 			slug: 'fuz-is-a-free-software-stack-for-human-agency',
 			title: 'Fuz is a free software stack for human agency',
 			date_published: '2026-11-06T21:15:06.000Z',
-			date_modified: '2026-11-06T21:15:06.000Z',
+			date_modified: '2026-11-16T22:22:55.000Z',
 			summary: 'introducing fuz.dev',
 			tags: ['announcement']
 		}
