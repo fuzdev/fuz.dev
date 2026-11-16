@@ -9,6 +9,10 @@
 	import PageLinks from './PageLinks.svelte';
 </script>
 
+<svelte:head>
+	<link rel="me" href="https://bsky.app/profile/fuz.dev" />
+</svelte:head>
+
 <main class="box width:100%">
 	<div class="box width_atmost_md mb_xl9">
 		<section class="box">

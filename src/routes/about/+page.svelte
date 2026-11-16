@@ -25,6 +25,9 @@
 			<h1 class="mt_xl2">fuz.dev</h1>
 		</header>
 	</section>
+	<section class="box">
+		<p>Bluesky as <a rel="me" href="https://bsky.app/profile/fuz.dev">@fuz.dev</a></p>
+	</section>
 	<section class="box row_wrap gap_xl2">
 		<PageLinks />
 	</section>
