@@ -30,11 +30,15 @@
 						<a href={resolve('/stack')}>the stack</a>. It's free software all the way down.
 					</p>
 					<p>
-						Fuz has been quietly built in public full-time since 2019. The project has one
-						maintainer, no shareholders or profit motive, and the plan is to fund it transparently
-						with public donations. This website will eventually have community spaces; for more see
-						<a href={resolve('/contributing')}>contributing</a> and the fuzdev org
-						<a href="https://github.com/orgs/fuzdev/discussions">discussions on GitHub</a>.
+						Fuz has been quietly built in public full-time since 2019. The project has
+						<a href="https://www.ryanatkn.com/">one maintainer</a>, no shareholders or profit
+						motive, and the plan is to fund it transparently with public
+						<a href="https://www.ryanatkn.com/funding">donations</a>. This website will eventually
+						have community spaces; for now see the
+						<a href={resolve('/contributing')}>contributing</a> page and
+						<a href={resolve('/blog/1-fuz-is-a-free-software-stack-for-human-agency')}>
+							intro post
+						</a>.
 					</p>
 				</div>
 			</div>

@@ -35,7 +35,10 @@
 					<a href="https://github.com/orgs/fuzdev/discussions">fuzdev org discussions</a>
 				</li>
 				<li>issues for bug reports and triage - when in doubt, prefer discussions over issues</li>
-				<li>PRs are restricted to collaborators - please email me if interested</li>
+				<li>
+					PRs are restricted to collaborators - please
+					<a href="https://www.ryanatkn.com/about">email me</a> if interested
+				</li>
 				<li>Bluesky as <a rel="me" href="https://bsky.app/profile/fuz.dev">@fuz.dev</a></li>
 			</ul>
 			<p>

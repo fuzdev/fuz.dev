@@ -173,7 +173,8 @@
 		<ul>
 			<li>
 				<a href="https://www.fuz.dev/contributing">fuz.dev/contributing</a> - discussions and issues
-				are open, PRs are restricted to collaborators (email me if interested)
+				are open, PRs are restricted to collaborators (please
+				<a href="https://www.ryanatkn.com/about">email me</a> if interested)
 			</li>
 			<li><a href="https://www.fuz.dev/stack">fuz.dev/stack</a> - technical overview</li>
 			<li>GitHub as <a rel="me" href="https://github.com/fuzdev">@fuzdev</a></li>

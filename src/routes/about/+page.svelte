@@ -36,7 +36,10 @@
 				<div class="panel p_xl shadow_inset_top_xs shade_00">
 					<p>
 						Fuz is a free software stack for human agency - see
-						<a href={resolve('/stack')}>the stack.</a>
+						<a href={resolve('/stack')}>the stack</a> and
+						<a href={resolve('/blog/1-fuz-is-a-free-software-stack-for-human-agency')}>
+							intro post
+						</a>.
 					</p>
 					<ul>
 						<li>
@@ -48,7 +51,10 @@
 							<ul>
 								<li>no investors or shareholders</li>
 								<li>self-funded so far</li>
-								<li>the plan is to fund it transparently with public donations</li>
+								<li>
+									the plan is to fund it transparently with public
+									<a href="https://www.ryanatkn.com/funding">donations</a>
+								</li>
 							</ul>
 						</li>
 						<li>
