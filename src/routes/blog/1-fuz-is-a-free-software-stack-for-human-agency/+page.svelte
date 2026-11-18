@@ -163,12 +163,10 @@
 			future as I build on it.
 		</p>
 		<p>
-			I'm seeking design collaborators to help shape the direction Fuz goes. I think the project
-			succeeds if a community forms and deliberates through important design choices,
-			collaboratively in public. To contribute, no expertise is needed, only a perspective you want
-			to share. When time permits, I hope to build a community site with the stack to supplement
-			GitHub discussions. In the meantime you're invited to join me on GitHub to follow along or
-			help out.
+			I'm seeking design collaborators to help shape the direction Fuz goes. No expertise is needed,
+			only a perspective you want to share. When time permits, I hope to build a community site with
+			the stack to supplement GitHub discussions. In the meantime you're invited to join me on
+			GitHub to follow along or help out.
 		</p>
 		<ul>
 			<li>
