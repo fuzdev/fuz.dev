@@ -1,0 +1,1 @@
+import{n as e}from"./bjSnOXRD.js";import"./D7c1z9pr.js";var t=t=>e(t.slice(1));export{t};
