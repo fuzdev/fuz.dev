@@ -7,7 +7,10 @@ import{C as e,D as t,F as n,G as r,H as i,I as a,J as o,L as s,N as c,R as l,S a
 			extend, and swap out unburdened, with polished UX and technical excellence. Fuz has no
 			investors and it will remain noncommercial, so it can focus on serving the people who use it.
 			I lucked into an opportunity to pursue self-funded work for a substantial period of time, and
-			after 7 years I'm announcing the results and continuation of that effort.</p> <p>For more about my background, see my personal blog's <a href="https://www.ryanatkn.com/blog/1-im-building-free-software-for-human-agency">intro post</a>. The short version is that I've been working in startups building on open source since
+			after 7 years I'm announcing the results and continuation of that effort.</p> <p>I'm building on Fuz for the long term, so as long as I'm a working developer, I plan to
+			maintain it, but the amount of time I can spend on it is unknown, and depends on factors I
+			can't control like funding. For now, it's my full-time (unpaid) job; more about me in my
+			personal blog's <a href="https://www.ryanatkn.com/blog/1-im-building-free-software-for-human-agency">intro post</a>. The short version is that I've been working in startups building on open source since
 			2011, and I started Fuz because I love free software and its potential to improve our lives.
 			Follow this blog's <a>feed</a> for more.</p> <h2>The Fuz stack</h2> <p>Fuz exists to accelerate the production of excellent software, for all kinds of purposes and
 			platforms. Today it can ship to the web, and also native platforms with web-only GUI; mobile
