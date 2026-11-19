@@ -30,7 +30,10 @@
 			after 7 years I'm announcing the results and continuation of that effort.
 		</p>
 		<p>
-			For more about my background, see my personal blog's
+			I'm building on Fuz for the long term, so as long as I'm a working developer, I plan to
+			maintain it, but the amount of time I can spend on it is unknown, and depends on factors I
+			can't control like funding. For now, it's my full-time (unpaid) job; more about me in my
+			personal blog's
 			<a href="https://www.ryanatkn.com/blog/1-im-building-free-software-for-human-agency">
 				intro post
 			</a>. The short version is that I've been working in startups building on open source since
