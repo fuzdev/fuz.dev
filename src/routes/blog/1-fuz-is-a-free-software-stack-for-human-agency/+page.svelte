@@ -38,6 +38,7 @@
 				intro post
 			</a>. The short version is that I've been working in startups building on open source since
 			2011, and I started Fuz because I love free software and its potential to improve our lives.
+			Although I use AI to develop software, I don't and won't use it to imitate human writing.
 			Follow this blog's <a href={asset('blog/feed.xml')}>feed</a> for more.
 		</p>
 		<h2>The Fuz stack</h2>
