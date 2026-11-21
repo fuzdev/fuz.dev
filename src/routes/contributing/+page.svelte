@@ -41,8 +41,8 @@
 				</li>
 				<li>Bluesky as <a rel="me" href="https://bsky.app/profile/fuz.dev">@fuz.dev</a></li>
 				<li>
-					funding is public and transparent, currently through
-					<a href="https://www.ryanatkn.com/funding">my personal accounts</a>
+					funding is currently through my
+					<a href="https://www.ryanatkn.com/funding">personal accounts</a>
 				</li>
 			</ul>
 			<p>
