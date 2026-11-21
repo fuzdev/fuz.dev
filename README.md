@@ -10,7 +10,7 @@ with TypeScript, CSS, Svelte, and SvelteKit,
 joined by native tools written in Rust - see [the stack](https://www.fuz.dev/stack).
 It's free software all the way down.
 
-Fuz has been quietly built in public full-time since 2019.
+Fuz has been built in public full-time since 2019.
 The project has one maintainer, no shareholders or profit motive,
 and the plan is to fund it transparently with public donations.
 

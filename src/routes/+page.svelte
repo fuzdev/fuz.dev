@@ -30,7 +30,7 @@
 						<a href={resolve('/stack')}>the stack</a>. It's free software all the way down.
 					</p>
 					<p>
-						Fuz has been quietly built in public full-time since 2019. The project has
+						Fuz has been built in public full-time since 2019. The project has
 						<a href="https://www.ryanatkn.com/">one maintainer</a>, no shareholders or profit
 						motive, and the plan is to fund it transparently with public
 						<a href="https://www.ryanatkn.com/funding">donations</a>. This website will eventually
