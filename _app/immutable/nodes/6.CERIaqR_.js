@@ -12,6 +12,7 @@ import{C as e,D as t,F as n,G as r,H as i,I as a,J as o,L as s,N as c,R as l,S a
 			can't control like funding. For now, it's my full-time (unpaid) job; more about me in my
 			personal blog's <a href="https://www.ryanatkn.com/blog/1-im-building-free-software-for-human-agency">intro post</a>. The short version is that I've been working in startups building on open source since
 			2011, and I started Fuz because I love free software and its potential to improve our lives.
+			Although I use AI to develop software, I don't and won't use it to imitate human writing.
 			Follow this blog's <a>feed</a> for more.</p> <h2>The Fuz stack</h2> <p>Fuz exists to accelerate the production of excellent software, for all kinds of purposes and
 			platforms. Today it can ship to the web, and also native platforms with web-only GUI; mobile
 			and native GUI are planned. The stack's third-party dependencies are opinionated to enable
