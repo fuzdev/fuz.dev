@@ -105,6 +105,13 @@ export const stack_layers: ReadonlyArray<StackLayer> = [
 				repo: github('fuz_template')
 			},
 			{
+				name: 'cord',
+				tagline: 'self-hosted voice, video, chat, and forums for connection with your people',
+				languages: ['ts', 'svelte', 'rust'],
+				status: 'early',
+				repo: github('cord')
+			},
+			{
 				name: 'zzz',
 				tagline: 'software garage for power users and devs',
 				languages: ['ts', 'svelte', 'rust'],
