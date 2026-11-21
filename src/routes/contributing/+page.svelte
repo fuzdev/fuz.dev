@@ -40,11 +40,15 @@
 					<a href="https://www.ryanatkn.com/about">email me</a> if interested
 				</li>
 				<li>Bluesky as <a rel="me" href="https://bsky.app/profile/fuz.dev">@fuz.dev</a></li>
+				<li>
+					funding is public and transparent, currently through
+					<a href="https://www.ryanatkn.com/funding">my personal accounts</a>
+				</li>
 			</ul>
 			<p>
 				AI usage is acceptable, see the
-				<a href="https://docs.fuz.dev/skills/fuz-stack">fuz-stack skill</a>, please disclose when
-				you feel doing so is appropriate, and be mindful of costing people's time and attention.
+				<a href="https://docs.fuz.dev/skills/fuz-stack">fuz-stack skill</a>; please disclose when
+				you feel doing so is appropriate, and be mindful of people's time and attention.
 			</p>
 			<p>
 				To report a security vulnerability, see
