@@ -109,6 +109,7 @@ export const stack_layers: ReadonlyArray<StackLayer> = [
 				tagline: 'self-hosted voice, video, chat, and forums for connection with your people',
 				languages: ['ts', 'svelte', 'rust'],
 				status: 'early',
+				site: 'https://cord.fuz.dev/',
 				repo: github('cord')
 			},
 			{
