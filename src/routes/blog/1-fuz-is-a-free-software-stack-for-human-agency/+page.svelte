@@ -126,11 +126,28 @@
 			</li>
 		</ul>
 		<p>
+			As the stack has matured, I've started building apps and websites for end-users on it. Three
+			are public but not ready to use yet:
+		</p>
+		<ul>
+			<li>
+				<strong><a href="https://github.com/fuzdev/cord">cord</a></strong> - self-hosted voice,
+				video, chat, and forums for connection with your people
+			</li>
+			<li>
+				<strong><a href="https://github.com/fuzdev/zzz">zzz</a></strong> - software garage for power
+				users and devs
+			</li>
+			<li>
+				<strong><a href="https://github.com/fuzdev/fuz_forge">fuz_forge</a></strong> -
+				personal-scale forge for self-hosting git repos, signed releases, and files
+			</li>
+		</ul>
+		<p>
 			For the full picture including third-party software, see
 			<a href="https://www.fuz.dev/stack">fuz.dev/stack</a>. The code is at
 			<a href="https://github.com/fuzdev">github.com/fuzdev</a>, and licensed with the
-			public-domain-equivalent 0BSD. As the stack has matured, I'm starting to work on apps and
-			websites for end-users, some in collaboration with other people. More about those later.
+			public-domain-equivalent 0BSD.
 		</p>
 		<p>
 			Here's my last 8 years of
@@ -170,7 +187,7 @@
 			I set out to make software under a different set of incentives than the norm, aligning
 			directly with the people who use it, without shareholders as the supreme customer, to produce
 			the best software I could imagine. The libraries are available for early adopters, but only a
-			few are ready for production, and I'll share apps made with Fuz when they're ready. Fuz will
+			few are ready for production, and I'll announce the apps when they're ready to use. Fuz will
 			not operate services beyond possible community websites (if I choose that direction, TBD), due
 			to costs and complicated incentives, simplifying its path to sustainability. I want Fuz to be
 			funded transparently with public donations, but it has no legal entity and may never, so for
