@@ -132,7 +132,7 @@
 			public-domain-equivalent 0BSD. As the stack has matured, I'm starting to work on apps and
 			websites for end-users, some in collaboration with other people. More about those later.
 		</p>
-		<p>Here's my last 7 years of public commits:</p>
+		<p>Here's my last 8 years of public commits:</p>
 		<img
 			src={asset('blog/my-github-activity-2019-to-2026.webp')}
 			width="800"
