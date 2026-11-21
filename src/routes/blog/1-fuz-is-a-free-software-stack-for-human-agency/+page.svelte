@@ -132,6 +132,13 @@
 			public-domain-equivalent 0BSD. As the stack has matured, I'm starting to work on apps and
 			websites for end-users, some in collaboration with other people. More about those later.
 		</p>
+		<p>Here's my last 7 years of public commits:</p>
+		<img
+			src={asset('blog/my-github-activity-2019-to-2026.webp')}
+			width="800"
+			height="919"
+			alt="a calendar heatmap of my public GitHub activity from 2019 to 2026, mostly in @fuzdev repos, with a row per year from November to November; it shows steady activity every year, getting denser and brighter through 2025 and 2026. A note says not pictured: a project rewritten as fuz_app and cord, Jan 2020 to Apr 2024"
+		/>
 		<h2>The AI elephant in the room</h2>
 		<p>
 			AI is reshaping the software world, and this project is driven by a person who uses AI with
