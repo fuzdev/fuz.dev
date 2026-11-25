@@ -11,7 +11,7 @@ For coding conventions, see Skill(fuz-stack).
 ## Gro commands
 
 ```bash
-gro check     # typecheck, test, lint, format check (run before committing)
+gro check     # typecheck, test, format check (run before committing)
 gro typecheck # typecheck only (faster iteration)
 gro test      # run tests with vitest
 gro build     # build for production (static adapter)
